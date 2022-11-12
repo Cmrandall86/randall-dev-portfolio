@@ -20,8 +20,9 @@ const theme = {
     xl: '1920px'
   },
 
-
   fonts: {
+    primary:'Oswald, sans-serif',
+    secondary: 'Kaushan Script, cursive'
 
   },
 

@@ -1,8 +1,9 @@
 import React from "react";
 
 import styled from "styled-components";
+import { Button } from "@nextui-org/react";
 
-export default function Button({ children, className, onClick = ()=>{}, ...props  }) {
+export default function Btn({ children, className, onClick = ()=>{}, ...props  }) {
   return (
     <StyledButton className={className} onClick={onClick} {...props}>
       {children}
@@ -10,7 +11,7 @@ export default function Button({ children, className, onClick = ()=>{}, ...props
   );
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled(Button)`
   border-radius: ${({ theme }) => theme.units.xs};
   padding: ${({ theme }) => theme.units.xs};
   cursor: pointer;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
 import mediaQueries from "./Breakpoints";
+import { css } from "@nextui-org/react";
 
 export default function NavBar() {
   const [openMobileNav, setOpenMobileNav] = useState(false);
@@ -20,7 +21,7 @@ export default function NavBar() {
           <Logo href="./" />
         </LogoWrapper>
         <HamburgerWrapper>
-          <HamburgerIcon onClick={handleClickHamburger} />
+          <HamburgerIcon onClick={handleClickHamburger}/>
         </HamburgerWrapper>
         <DesktopNavList>
           <PageLink href="./about">About</PageLink>
@@ -39,9 +40,9 @@ export default function NavBar() {
   );
 }
 
-const HamburgerIcon = ({ onClick }) => {
+const HamburgerIcon = ({ onClick, css }) => {
   return (
-    <Button onClick={onClick}>
+    <Button onClick={onClick} light style={{minWidth:'100%'}}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-menu-2"
@@ -63,7 +64,7 @@ const HamburgerIcon = ({ onClick }) => {
   );
 };
 
-const NavWrapper = styled.div.attrs({
+const NavWrapper = styled.nav.attrs({
   className: "flex justify-between items-center",
 })`
   height: 75px;
