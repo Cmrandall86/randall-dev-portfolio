@@ -1,9 +1,10 @@
+'use client'
+
 import React, { useState } from "react";
 
 import styled from "styled-components";
-import { Textarea, Input, Text, Spacer, css, red } from "@nextui-org/react";
 import Form from "./Form";
-import Btn from "@components/Button";
+import { Textarea, Input, Button } from "@nextui-org/react";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -40,25 +41,22 @@ export default function Footer({}) {
         mobileWidth={'100%'}
         width={'50%'}
       >
-        <Text
+        <p
           as="h3"
           css={{ fontFamily: "Kaushan Script, cursive", fontSize: "2rem" }}
         >
           Get in touch
-        </Text>
-        <Text 
+        </p>
+        <p 
           as="p"
           css= {{ lineHeight: '1.2'}}
 
         >
           I'm always looking for new opportunities to grow personally and
           professionally.
-        </Text>
-        <Spacer y={0.1} />
+        </p>
 
-        <StyledInput
-          clearable
-          bordered
+        <Input
           labelPlaceholder="Email"
           type="email"
           name="email"
@@ -66,7 +64,6 @@ export default function Footer({}) {
           onChange={handleChange}
           required
         />
-        <Spacer y={0.1} />
         <StyledTextArea
           rows={5}
           label="Leave a message"
@@ -78,7 +75,7 @@ export default function Footer({}) {
           css={{ borderRadius: 0 }}
           required
         />
-        <Btn type="submit">Submit Message</Btn>
+        <Button type="submit">Submit Message</Button>
         <input type="hidden" name="form-name" value="emailForm" />
       </Form>
     </FormWrapper>

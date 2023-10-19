@@ -1,8 +1,14 @@
-import React from 'react'
-import styled, {ThemeProvider} from 'styled-components';
+'use client'
 
-import NavBar from './NavBar'
-import Footer from './Footer';
+import React from 'react'
+import {ThemeProvider} from 'styled-components';
+
+import { Poppins } from 'next/font/google'
+ 
+const poppins = Poppins({ 
+    subsets: ['latin'],
+    weight: '400'
+})
 
 const theme = {
   colors: {
@@ -21,7 +27,7 @@ const theme = {
   },
 
   fonts: {
-    primary:'Oswald, sans-serif',
+    primary: `${poppins.style.fontFamily}`,
     secondary: 'Kaushan Script, cursive'
 
   },
@@ -37,17 +43,13 @@ const theme = {
   }
 }
 
-
-
-export default function Layout({children}) {
+export default function Theme_Provider({children}) {
 
   return (
-    <>
+    <div>
         <ThemeProvider theme={theme}>
-            <NavBar/>
-            <main>{children}</main>
-            <Footer/>
+            {children}
         </ThemeProvider>
-    </>
+    </div>
   )
 }

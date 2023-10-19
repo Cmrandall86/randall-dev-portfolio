@@ -1,10 +1,10 @@
+'use client'
+
 import React, { useState } from "react";
-import { NextImage } from "./Image";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
 import mediaQueries from "./Breakpoints";
-import { css } from "@nextui-org/react";
 
 export default function NavBar() {
   const [openMobileNav, setOpenMobileNav] = useState(false);
@@ -68,9 +68,7 @@ const NavWrapper = styled.nav.attrs({
   className: "flex justify-between items-center",
 })`
   height: 75px;
-  background: #ddd;
   position: fixed;
-  opacity: 80%;
   width: 100%;
   z-index: 100;
 `;
@@ -118,11 +116,11 @@ const MobileNavList = styled.ul.attrs({
 `;
 
 const DesktopNavList = styled.ul.attrs({
-  className: "flex",
+  className: "flex relative",
 })`
 
   display: none;
-
+  right: 10%;
   ${mediaQueries('min', 'md')}{
     display: flex;
   }

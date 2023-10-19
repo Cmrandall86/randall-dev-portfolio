@@ -1,16 +1,4 @@
-import '@styles/globals.css'
-import Layout from '../components/Layout'
-import {SSRProvider} from '@react-aria/ssr'
-
-
-function Application({ Component, pageProps }) {
-  return (
-    <SSRProvider>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </SSRProvider>
-  )
+import 'styles/globals.scss'
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
-
-export default Application

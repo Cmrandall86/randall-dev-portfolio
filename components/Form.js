@@ -33,6 +33,4 @@ const StyledForm = styled.form`
   ${mediaQueries('min', 'md')}{
     width: ${props => props.width};
   }
-
-
 `

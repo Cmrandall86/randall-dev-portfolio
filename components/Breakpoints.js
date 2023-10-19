@@ -7,7 +7,7 @@ export default function mediaQueries (
       md: 768,
       lg: 992,
       lg1: 1024,
-      xl: 1200,
+      xl: 1240,
       xxl: 1400
     }
   
