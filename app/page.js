@@ -4,39 +4,12 @@ import mediaQueries from "@components/Breakpoints";
 import styled from "styled-components";
 import StyledText from "@components/Text";
 // import { Text } from "@nextui-org/react";
-
-
-
+import Grad from '../public/gradient.png'
+import Image from "next/image";
 export default function HomePage() {
   return (
         <HomePageWrapper>
-        <BackgroundGradient/>
-            <CardWrapper>
-            <Card>
-                {/* <ImageWrapper>
-                <Image src={"/pexels.jpg"} layout={"fill"} alt={"pic"} />
-                <CardOverlayText>Chris Randall</CardOverlayText>
-                </ImageWrapper> */}
-            </Card>
-            </CardWrapper>
-            <HR />
-            <TextWrap>
-            {/* <Text as="p" weight="hairline" css={{ textAlign: "center", lineHeight: "1.2" }}>
-                Hey! Im Chris, a front-end web developer based out of Albuquerque, New Mexico. I work mostly with React and
-                NextJS using styled-components to create responsive and performant web applications. I'm passionate about
-                growing as a software developer and am always looking for opportunities to learn and create work I can be
-                proud of.
-            </Text>
-            </TextWrap>
-            <TextWrap>
-            <Text as="p" css={{ textAlign: "center", lineHeight: "1.2" }}>
-                While my main skillset revolves around front-end web technologies (HTML/CSS/JS) I have some experience
-                building back-ends using node.js/express. I have also built school projects using Wordpress, C#/.NET/Blazor,
-                Python SQL, and PHP.
-            </Text> */}
-            </TextWrap>
-            <HR />
-
+              <BackgroundGradient/>
         </HomePageWrapper>
   );
 }
@@ -44,24 +17,29 @@ export default function HomePage() {
 
 const HomePageWrapper = styled.main.attrs({ className: "flex flex-column items-center justify-center" })`
   font-family: ${({ theme }) => theme.fonts.primary};
+  height: 100vh;
 `;
 
 const TextWrap = styled.div`
   margin: 30px 0;
 `;
 
-const BackgroundGradient = styled.div.attrs({ className: "absolute" })`
-  background: linear-gradient(180deg, #F8F9FAff, #CFEEF4ff, #A5E2EFff, #7CD7E9ff, #53CBE3ff, #29C0DEff, #00B4D8ff);
-  height: 80vh;
-  width: 45vw;
+const BackgroundGradient = styled.div.attrs({className: 'absolute'})`
+  background-image: url(${Grad.src});
+  height: 100%;
+  width: 100%;
   right: 0;
   top: 0;
-  border-radius: 0 0 0 100%;
-  z-index: -1;
   opacity: .3;
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: top right;
+  transition: background .3s,border-radius .3s,opacity .3s;
 
-  
-`;
+  ${mediaQueries("max", "md")} {
+    background-size: 450px auto;
+  }
+  `
+  ;
 
 const ImageWrapper = styled.div`
   position: relative;
