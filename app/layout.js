@@ -3,7 +3,7 @@
 import React from 'react'
 import Theme_Provider from 'providers/Theme_Provider'
 import NextUI_Provider from 'providers/NextUI_Provider'
-import 'styles.scss'
+// import 'styles.scss'
 import Footer from '@components/Footer'
 import NavBar from '@components/NavBar'
 
