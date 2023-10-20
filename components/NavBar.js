@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
@@ -13,6 +13,23 @@ export default function NavBar() {
     setToggleMobileNavLinks(!toggleMobileNavLinks);
   };
 
+
+    useEffect(() => {
+      function handleResize() {
+        // Set toggleMobileNavLinks to false when the window is resized
+        setToggleMobileNavLinks(false);
+      }
+  
+      // Add a resize event listener
+      window.addEventListener("resize", handleResize);
+  
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
+
   return (
     <>
       <NavWrapper>
@@ -23,17 +40,13 @@ export default function NavBar() {
           <HamburgerIcon onClick={handleClickHamburger}/>
         </HamburgerWrapper>
         <DesktopNavList>
-          <PageLink href="./about">About</PageLink>
           <PageLink href="./resume">Resume</PageLink>
-          <PageLink href="https://github.com/Cmrandall86">Github</PageLink>
         </DesktopNavList>
       </NavWrapper>
       <MobileNavList
         $toggleMobileNavLinks={toggleMobileNavLinks}
       >
-        <PageLink href="./about">About</PageLink>
         <PageLink href="./resume">Resume</PageLink>
-        <PageLink href="https://github.com/Cmrandall86">Github</PageLink>
       </MobileNavList>
     </>
   );
@@ -85,8 +98,7 @@ const LogoWrapper = styled.div`
 `;
 
 const PageLink = styled.a`
-  padding: 40px;
-
+  height: fit-content;
   &:hover{
     color: blue;
   }
@@ -109,9 +121,10 @@ const MobileNavList = styled.ul`
   width: 100%;
   z-index: 1;
   line-height: 50px;
-  background: red;
   position: relative;
   top: 60px;
+  padding: 20px;
+  background: white;
 
   display: ${({$toggleMobileNavLinks}) => $toggleMobileNavLinks ? "flex" : `none`};
 

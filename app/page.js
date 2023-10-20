@@ -3,15 +3,24 @@
 import mediaQueries from "@components/Breakpoints";
 import styled from "styled-components";
 import Grad from "../public/gradient.png";
+import ProfilePic from '../public/fam.jpg'
+import Image from "next/image";
+
 export default function HomePage() {
   return (
     <HomePageWrapper>
       <BackgroundGradient />
+        <ProfilePicture 
+        src={ProfilePic}
+        alt='profile picture'
+        // fill
+        />
+
     </HomePageWrapper>
   );
 }
 
-const HomePageWrapper = styled.main.attrs({ className: "flex flex-column items-center justify-center" })`
+const HomePageWrapper = styled.div`
   font-family: ${({ theme }) => theme.fonts.primary};
   height: 100vh;
 `;
@@ -35,3 +44,12 @@ const BackgroundGradient = styled.div.attrs({ className: "absolute" })`
     background-size: 360px auto;
   }
 `;
+
+const ProfilePicture = styled(Image)`
+  border-radius: 100%;
+  background: red;
+  height: 50vw;
+  width: 50vw;
+  
+
+`
