@@ -7,7 +7,6 @@ import Logo from "./Logo";
 import mediaQueries from "./Breakpoints";
 
 export default function NavBar() {
-  const [openMobileNav, setOpenMobileNav] = useState(false);
   const [toggleMobileNavLinks, setToggleMobileNavLinks] = useState(false);
 
   const handleClickHamburger = () => {
@@ -16,7 +15,7 @@ export default function NavBar() {
 
   return (
     <>
-      <NavWrapper displayNav={openMobileNav}>
+      <NavWrapper>
         <LogoWrapper>
           <Logo href="./" />
         </LogoWrapper>
@@ -30,7 +29,7 @@ export default function NavBar() {
         </DesktopNavList>
       </NavWrapper>
       <MobileNavList
-        toggleMobileNavLinks={toggleMobileNavLinks}
+        $toggleMobileNavLinks={toggleMobileNavLinks}
       >
         <PageLink href="./about">About</PageLink>
         <PageLink href="./resume">Resume</PageLink>
@@ -40,9 +39,9 @@ export default function NavBar() {
   );
 }
 
-const HamburgerIcon = ({ onClick, css }) => {
+const HamburgerIcon = ({ onClick }) => {
   return (
-    <Button onClick={onClick} light style={{minWidth:'100%'}}>
+    <Button onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-menu-2"
@@ -64,17 +63,19 @@ const HamburgerIcon = ({ onClick, css }) => {
   );
 };
 
-const NavWrapper = styled.nav.attrs({
-  className: "flex justify-between items-center",
-})`
+const NavWrapper = styled.nav`
   height: 75px;
   position: fixed;
   width: 100%;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+
 `;
 
 const LogoWrapper = styled.div`
-  height: 30px;
+  height: 50px;
   width: 190px;
 
   ${mediaQueries("min", "md")} {
@@ -93,25 +94,26 @@ const PageLink = styled.a`
 
 const HamburgerWrapper = styled.div`
   display: block;
-  padding: 20px;
+  width: fit-content;
+  padding-top: 10px;
+
 
   ${mediaQueries("min", "md")} {
     display: none;
   }
 `;
 
-const MobileNavList = styled.ul.attrs({
-  className: "flex flex-column items-center",
-})`
-  padding-top: 150px;
+const MobileNavList = styled.ul`
   font-weight: bolder;
-  font-size: 2.2rem;
-  height: 100vh;
+  height: 30vh;
   width: 100%;
-  z-index: 11;
+  z-index: 1;
   line-height: 50px;
+  background: red;
+  position: relative;
+  top: 60px;
 
-  display: ${(props) => (props.toggleMobileNavLinks ? "flex" : `none`)};
+  display: ${({$toggleMobileNavLinks}) => $toggleMobileNavLinks ? "flex" : `none`};
 
 `;
 
