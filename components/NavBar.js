@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
@@ -13,42 +13,39 @@ export default function NavBar() {
     setToggleMobileNavLinks(!toggleMobileNavLinks);
   };
 
+  useEffect(() => {
+    function handleResize() {
+      // Set toggleMobileNavLinks to false when the window is resized
+      setToggleMobileNavLinks(false);
+    }
 
-    useEffect(() => {
-      function handleResize() {
-        // Set toggleMobileNavLinks to false when the window is resized
-        setToggleMobileNavLinks(false);
-      }
-  
-      // Add a resize event listener
-      window.addEventListener("resize", handleResize);
-  
-      // Clean up the event listener when the component unmounts
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
+    // Add a resize event listener
+    window.addEventListener("resize", handleResize);
 
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <>
-      <NavWrapper>
+    <NavWrapper>
+      <Nav>
         <LogoWrapper>
           <Logo href="./" />
         </LogoWrapper>
         <HamburgerWrapper>
-          <HamburgerIcon onClick={handleClickHamburger}/>
+          <HamburgerIcon onClick={handleClickHamburger} />
         </HamburgerWrapper>
         <DesktopNavList>
           <PageLink href="./resume">Resume</PageLink>
         </DesktopNavList>
-      </NavWrapper>
-      <MobileNavList
-        $toggleMobileNavLinks={toggleMobileNavLinks}
-      >
+      </Nav>
+
+      <MobileNavList $toggleMobileNavLinks={toggleMobileNavLinks}>
         <PageLink href="./resume">Resume</PageLink>
       </MobileNavList>
-    </>
+    </NavWrapper>
   );
 }
 
@@ -84,7 +81,14 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+`;
 
+const Nav = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin-inline: auto;
 `;
 
 const LogoWrapper = styled.div`
@@ -99,7 +103,7 @@ const LogoWrapper = styled.div`
 
 const PageLink = styled.a`
   height: fit-content;
-  &:hover{
+  &:hover {
     color: blue;
   }
 `;
@@ -108,7 +112,6 @@ const HamburgerWrapper = styled.div`
   display: block;
   width: fit-content;
   padding-top: 10px;
-
 
   ${mediaQueries("min", "md")} {
     display: none;
@@ -126,19 +129,16 @@ const MobileNavList = styled.ul`
   padding: 20px;
   background: white;
 
-  display: ${({$toggleMobileNavLinks}) => $toggleMobileNavLinks ? "flex" : `none`};
-
+  display: ${({ $toggleMobileNavLinks }) => ($toggleMobileNavLinks ? "flex" : `none`)};
 `;
 
 const DesktopNavList = styled.ul.attrs({
   className: "flex relative",
 })`
-
+  padding-top: 10px;
   display: none;
   right: 10%;
-  ${mediaQueries('min', 'md')}{
+  ${mediaQueries("min", "md")} {
     display: flex;
   }
-  
-  
 `;

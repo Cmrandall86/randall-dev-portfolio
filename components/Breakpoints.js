@@ -7,8 +7,7 @@ export default function mediaQueries(
   const screens = {
     sm: 576,
     md: 768,
-    lg: 992,
-    lg1: 1024,
+    lg: 1024,
     xl: 1240,
     xxl: 1400,
   };
