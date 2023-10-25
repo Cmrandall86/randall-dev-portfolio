@@ -51,7 +51,6 @@ const LS = styled.div`
     width: 100%;
     justify-content: start;
     align-items: start;
-
   }
 `;
 

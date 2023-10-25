@@ -33,7 +33,7 @@ export default function NavBar() {
     <NavWrapper>
       <Nav>
         <LogoWrapper>
-          <Logo href="./" />
+          <Logo href="/" />
         </LogoWrapper>
         <HamburgerWrapper>
           <HamburgerIcon onClick={handleClickHamburger} />
@@ -129,6 +129,7 @@ const MobileNavList = styled.ul`
   top: 60px;
   padding: 20px;
   background: white;
+  position: absolute;
 
   display: ${({ $toggleMobileNavLinks }) => ($toggleMobileNavLinks ? "flex" : `none`)};
 `;
