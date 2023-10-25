@@ -52,7 +52,7 @@ export default function Footer({}) {
           css= {{ lineHeight: '1.2'}}
 
         >
-          I'm always looking for new opportunities to grow personally and
+          I am always looking for new opportunities to grow personally and
           professionally.
         </p>
 
