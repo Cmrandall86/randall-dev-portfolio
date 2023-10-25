@@ -5,6 +5,9 @@ import styled from "styled-components";
 import Grad from "../public/gradient.png";
 import ProfilePic from "../public/fam.jpg";
 import ResponsiveImage from "@components/Image";
+import LinkedIn_icon from "public/LinkedIn_icon";
+import Mail_icon from "public/Mail_icon";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -12,18 +15,19 @@ export default function HomePage() {
       <BackgroundGradient />
       <Content>
         <LS>
-          <SubTitle>
-            HELLO, MY NAME IS
-          </SubTitle>
-          <Divider/>
+          <LSTextWrap>
+            <PreTitle>HELLO, MY NAME IS</PreTitle>
+            <Divider />
 
-          <Title>
-            Chris Randall
-          </Title>
+            <Title>Chris Randall</Title>
+            <SubTitle>Web Developer</SubTitle>
+            <Contact href="https://www.linkedin.com/in/chris-randall-1b2919167/"><LinkedIn_icon/> LinkedIn Profile</Contact>
+            <Contact href="mailto:cmrandall86@gmail.com"><Mail_icon/> Cmrandall86@gmail.com</Contact>
+          </LSTextWrap>
         </LS>
         <RS>
           <ImageWrap>
-            <ResponsiveImage src={ProfilePic} alt="profile picture" photoAspectRatio="square" />
+            <ResponsiveImage priority src={ProfilePic} alt="profile picture" photoAspectRatio="square" />
           </ImageWrap>
         </RS>
       </Content>
@@ -31,14 +35,23 @@ export default function HomePage() {
   );
 }
 
+const LSTextWrap = styled.div`
+
+`
+
 const LS = styled.div`
   width: 50%;
   display: flex;
   height: 100%;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   ${mediaQueries("max", "md")} {
     width: 100%;
+    justify-content: start;
+    align-items: start;
+
   }
 `;
 
@@ -69,7 +82,6 @@ const HomePageWrapper = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-
 `;
 
 const BackgroundGradient = styled.div.attrs({ className: "absolute" })`
@@ -96,7 +108,7 @@ const ImageWrap = styled.div`
   width: 100%;
   border-radius: 100%;
   position: relative;
-  padding-top: 150px;
+  padding-top: 100px;
   ${mediaQueries("range", null, "md", "xl")} {
     width: 80%;
     padding-top: 0;
@@ -107,18 +119,45 @@ const ImageWrap = styled.div`
   }
 `;
 
+const PreTitle = styled.div`
+  height: fit-content;
+  color: #758398;
+  font-family: ${({ theme }) => theme.fonts.contact};
+  font-weight: 500;
+`;
 
 const SubTitle = styled.span`
   height: fit-content;
-`
+  font-size: 20px;
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  color: #758398;
+  margin-bottom: 40px;
+`;
 
 const Divider = styled.div`
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #758398;
   height: 2px;
   width: 60px;
   margin: 15px 0 30px 0;
-`
+`;
 
 const Title = styled.h2`
-  font-size: 44px;
-`
+  font-size: clamp(40px, 5.145vw, 64px);
+  font-family: ${({ theme }) => theme.fonts.secondary};
+`;
+
+const Contact = styled(Link)`
+  font-size: 20px;
+  font-family: ${({ theme }) => theme.fonts.contact};
+  display: flex;
+  cursor: pointer;
+  gap: 30px;
+  align-items: flex-end;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 20px;
+  z-index: 1200;
+
+`;
+
+

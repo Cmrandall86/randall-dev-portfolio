@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
 import mediaQueries from "./Breakpoints";
+import Link from "next/link";
 
 export default function NavBar() {
   const [toggleMobileNavLinks, setToggleMobileNavLinks] = useState(false);
@@ -101,7 +102,7 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const PageLink = styled.a`
+const PageLink = styled(Link)`
   height: fit-content;
   &:hover {
     color: blue;

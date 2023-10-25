@@ -3,11 +3,21 @@
 import React from 'react'
 import {ThemeProvider} from 'styled-components';
 
-import { Poppins } from 'next/font/google'
+import { Poppins, Playfair_Display,Barlow_Semi_Condensed } from 'next/font/google'
  
 const poppins = Poppins({ 
     subsets: ['latin'],
     weight: '400'
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: '800'
+})
+
+const barlow = Barlow_Semi_Condensed({
+  subsets: ['latin'],
+  weight: ['400', '500']
 })
 
 const theme = {
@@ -28,8 +38,8 @@ const theme = {
 
   fonts: {
     primary: `${poppins.style.fontFamily}`,
-    secondary: 'Kaushan Script, cursive'
-
+    secondary: `${[playfair.style.fontFamily]}`,
+    contact: `${[barlow.style.fontFamily]}`
   },
 
   units: {
