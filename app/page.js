@@ -27,7 +27,7 @@ export default function HomePage() {
         </LS>
         <RS>
           <ImageWrap>
-            <ResponsiveImage priority src={ProfilePic} alt="profile picture" photoAspectRatio="square" />
+            <ResponsiveImage priority src={ProfilePic} alt="profile picture" photoAspectRatio="square" fill />
           </ImageWrap>
         </RS>
       </Content>
@@ -83,13 +83,14 @@ const HomePageWrapper = styled.div`
   justify-content: center;
 `;
 
-const BackgroundGradient = styled.div.attrs({ className: "absolute" })`
+const BackgroundGradient = styled.div`
   background-image: url(${Grad.src});
   height: 100%;
   width: 100vw;
   right: 0;
   top: 0;
   opacity: 0.3;
+  position: absolute;
   background-repeat: no-repeat; /* Prevent image from repeating */
   background-position: top right;
   transition: background 0.3s;

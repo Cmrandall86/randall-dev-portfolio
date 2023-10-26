@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Button from "./Button";
 import Logo from "./Logo";
 import mediaQueries from "./Breakpoints";
 import Link from "next/link";
@@ -52,7 +51,7 @@ export default function NavBar() {
 
 const HamburgerIcon = ({ onClick }) => {
   return (
-    <Button onClick={onClick}>
+    <button onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-menu-2"
@@ -70,7 +69,7 @@ const HamburgerIcon = ({ onClick }) => {
         <line x1="4" y1="12" x2="20" y2="12" />
         <line x1="4" y1="18" x2="20" y2="18" />
       </svg>
-    </Button>
+    </button>
   );
 };
 

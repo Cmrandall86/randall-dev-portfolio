@@ -4,7 +4,6 @@ import React, { useState } from "react";
 
 import styled from "styled-components";
 import Form from "./Form";
-import { Textarea, Input, Button } from "@nextui-org/react";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -92,13 +91,9 @@ const FormWrapper = styled.div.attrs({
   padding: 40px;
 `;
 
-const StyledTextArea = styled(Textarea)`
-  .nextui-input-wrapper {
-    border-radius: 5px;
-  }
+const StyledTextArea = styled.textarea`
+
 `;
-const StyledInput = styled(Input)`
-  .nextui-input-wrapper {
-    border-radius: 5px;
-  }
+const StyledInput = styled.input`
+
 `;
