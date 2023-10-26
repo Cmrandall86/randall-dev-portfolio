@@ -55,7 +55,7 @@ export default function Footer({}) {
           professionally.
         </p>
 
-        <Input
+        <input
           labelPlaceholder="Email"
           type="email"
           name="email"
@@ -74,7 +74,7 @@ export default function Footer({}) {
           css={{ borderRadius: 0 }}
           required
         />
-        <Button type="submit">Submit Message</Button>
+        <button type="submit">Submit Message</button>
         <input type="hidden" name="form-name" value="emailForm" />
       </Form>
     </FormWrapper>

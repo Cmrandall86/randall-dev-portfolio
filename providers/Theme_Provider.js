@@ -3,23 +3,6 @@
 import React from 'react'
 import {ThemeProvider} from 'styled-components';
 
-import { Poppins, Playfair_Display,Barlow_Semi_Condensed } from 'next/font/google'
- 
-const poppins = Poppins({ 
-    subsets: ['latin'],
-    weight: '400'
-})
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: '800'
-})
-
-const barlow = Barlow_Semi_Condensed({
-  subsets: ['latin'],
-  weight: ['400', '500']
-})
-
 const theme = {
   colors: {
     primary: 'green',
@@ -34,12 +17,6 @@ const theme = {
     md: '1280px',
     lg: '1400px',
     xl: '1920px'
-  },
-
-  fonts: {
-    primary: `${poppins.style.fontFamily}`,
-    secondary: `${[playfair.style.fontFamily]}`,
-    contact: `${[barlow.style.fontFamily]}`
   },
 
   units: {

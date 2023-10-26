@@ -10,6 +10,7 @@ import Mail_icon from "public/Mail_icon";
 import Link from "next/link";
 
 export default function HomePage() {
+
   return (
     <HomePageWrapper>
       <BackgroundGradient />
@@ -77,10 +78,11 @@ const Content = styled.div`
 `;
 
 const HomePageWrapper = styled.div`
-  font-family: ${({ theme }) => theme.fonts.primary};
   height: 100vh;
   display: flex;
   justify-content: center;
+  font-family: var(--font-poppins);
+
 `;
 
 const BackgroundGradient = styled.div`
@@ -106,7 +108,7 @@ const BackgroundGradient = styled.div`
 
 const ImageWrap = styled.div`
   width: 100%;
-  border-radius: 100%;
+  // border-radius: 500px 500px 500px 500px;
   position: relative;
   padding-top: 100px;
   ${mediaQueries("range", null, "md", "xl")} {
@@ -122,14 +124,14 @@ const ImageWrap = styled.div`
 const PreTitle = styled.div`
   height: fit-content;
   color: #758398;
-  font-family: ${({ theme }) => theme.fonts.contact};
+  font-family: var(--font-barlow);
   font-weight: 500;
 `;
 
 const SubTitle = styled.span`
   height: fit-content;
   font-size: 20px;
-  font-family: ${({ theme }) => theme.fonts.secondary};
+  font-family: var(--font-playfair);
   color: #758398;
   margin-bottom: 40px;
 `;
@@ -143,12 +145,12 @@ const Divider = styled.div`
 
 const Title = styled.h2`
   font-size: clamp(40px, 5.145vw, 64px);
-  font-family: ${({ theme }) => theme.fonts.secondary};
+  font-family: var(--font-playfair);
 `;
 
 const Contact = styled(Link)`
   font-size: 20px;
-  font-family: ${({ theme }) => theme.fonts.contact};
+  font-family: var(--font-barlow);
   display: flex;
   cursor: pointer;
   gap: 30px;
