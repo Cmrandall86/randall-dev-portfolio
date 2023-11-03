@@ -56,7 +56,7 @@ export default function Footer({}) {
         </p>
 
         <input
-          labelPlaceholder="Email"
+          placeholder="Email"
           type="email"
           name="email"
           value={messageData.email}
@@ -69,8 +69,7 @@ export default function Footer({}) {
           name="message"
           value={messageData.message}
           onChange={handleChange}
-          bordered
-          labelPlaceholder="Enter a message"
+          placeholder="Enter a message"
           css={{ borderRadius: 0 }}
           required
         />
@@ -88,7 +87,6 @@ const FormWrapper = styled.div.attrs({
   justify-content: center;
   height: 100%;
   width: 100%;
-  padding: 40px;
 `;
 
 const StyledTextArea = styled.textarea`

@@ -39,7 +39,6 @@ export default function ResponsiveImage({
             style={{
               objectFit: 'cover',
               maxHeight: maxHeight,
-              borderRadius: '100%'
             }}
             sizes={sizes}
           />

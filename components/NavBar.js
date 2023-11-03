@@ -38,12 +38,12 @@ export default function NavBar() {
           <HamburgerIcon onClick={handleClickHamburger} />
         </HamburgerWrapper>
         <DesktopNavList>
-          <PageLink href="./resume">Resume</PageLink>
+          <PageLink href="./resume" >Resume</PageLink>
         </DesktopNavList>
       </Nav>
 
       <MobileNavList $toggleMobileNavLinks={toggleMobileNavLinks}>
-        <PageLink href="./resume">Resume</PageLink>
+        <PageLink href="./resume" onClick={()=> setToggleMobileNavLinks(false)}>Resume</PageLink>
       </MobileNavList>
     </NavWrapper>
   );
@@ -51,7 +51,16 @@ export default function NavBar() {
 
 const HamburgerIcon = ({ onClick }) => {
   return (
-    <button onClick={onClick}>
+    <button 
+    onClick={onClick}
+    style={{
+      border: 'none',
+      background: 'transparent',
+      padding: '0 10px',
+      cursor: 'pointer'
+    }}
+    
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="icon icon-tabler icon-tabler-menu-2"
@@ -80,7 +89,7 @@ const NavWrapper = styled.nav`
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0;
 `;
 
 const Nav = styled.div`
@@ -103,6 +112,9 @@ const LogoWrapper = styled.div`
 
 const PageLink = styled(Link)`
   height: fit-content;
+  font-family: var(--font-barlow);
+  padding-right: 20px;
+  text-decoration: none;
   &:hover {
     color: blue;
   }
@@ -120,7 +132,7 @@ const HamburgerWrapper = styled.div`
 
 const MobileNavList = styled.ul`
   font-weight: bolder;
-  height: 30vh;
+  height: 20vh;
   width: 100%;
   z-index: 1;
   line-height: 50px;

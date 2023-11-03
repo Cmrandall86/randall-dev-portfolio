@@ -64,6 +64,10 @@ const RS = styled.div`
     width: 100%;
     justify-content: center;
   }
+
+  img {
+    border-radius: 100%;
+  }
 `;
 
 const Content = styled.div`
@@ -93,7 +97,7 @@ const BackgroundGradient = styled.div`
   top: 0;
   opacity: 0.3;
   position: absolute;
-  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-repeat: no-repeat;
   background-position: top right;
   transition: background 0.3s;
 
@@ -108,7 +112,6 @@ const BackgroundGradient = styled.div`
 
 const ImageWrap = styled.div`
   width: 100%;
-  // border-radius: 500px 500px 500px 500px;
   position: relative;
   padding-top: 100px;
   ${mediaQueries("range", null, "md", "xl")} {
@@ -159,7 +162,8 @@ const Contact = styled(Link)`
   position: relative;
   margin-top: 20px;
   z-index: 1200;
-
+  text-decoration: none;
+  align-items: center;
 `;
 
 
