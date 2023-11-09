@@ -10,7 +10,6 @@ import Mail_icon from "public/Mail_icon";
 import Link from "next/link";
 
 export default function HomePage() {
-
   return (
     <HomePageWrapper>
       <BackgroundGradient />
@@ -22,8 +21,12 @@ export default function HomePage() {
 
             <Title>Chris Randall</Title>
             <SubTitle>Web Developer</SubTitle>
-            <Contact href="https://www.linkedin.com/in/chris-randall-1b2919167/"><LinkedIn_icon/> LinkedIn Profile</Contact>
-            <Contact href="mailto:cmrandall86@gmail.com"><Mail_icon/> Cmrandall86@gmail.com</Contact>
+            <Contact href="https://www.linkedin.com/in/chris-randall-1b2919167/">
+              <LinkedIn_icon /> LinkedIn Profile
+            </Contact>
+            <Contact href="mailto:cmrandall86@gmail.com">
+              <Mail_icon /> Cmrandall86@gmail.com
+            </Contact>
           </LSTextWrap>
         </LS>
         <RS>
@@ -36,9 +39,7 @@ export default function HomePage() {
   );
 }
 
-const LSTextWrap = styled.div`
-
-`
+const LSTextWrap = styled.div``;
 
 const LS = styled.div`
   width: 50%;
@@ -86,7 +87,6 @@ const HomePageWrapper = styled.div`
   display: flex;
   justify-content: center;
   font-family: var(--font-poppins);
-
 `;
 
 const BackgroundGradient = styled.div`
@@ -165,5 +165,3 @@ const Contact = styled(Link)`
   text-decoration: none;
   align-items: center;
 `;
-
-
