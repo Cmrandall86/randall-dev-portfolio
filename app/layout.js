@@ -37,7 +37,7 @@ export default function layout({ children }) {
             <Theme_Provider>
               <NavBar />
               {children}
-              <Footer/>
+              {/* <Footer/> */}
             </Theme_Provider>
         </main>
       </body>
