@@ -5,7 +5,6 @@ import styled from "styled-components";
 import ResponsiveImage from "@components/Image";
 
 import ResumePNG from "/public/Resume.png";
-import mediaQueries from "@components/Breakpoints";
 
 export default function Resume() {
   return (

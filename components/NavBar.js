@@ -38,12 +38,26 @@ export default function NavBar() {
           <HamburgerIcon onClick={handleClickHamburger} />
         </HamburgerWrapper>
         <DesktopNavList>
-          <PageLink href="./resume" >Resume</PageLink>
+          <PageLink href="./">Home</PageLink>
+          <PageLink href="./resume">Resume</PageLink>
+          <PageLink href="./projects">Projects</PageLink>
+          <PageLink href="https://github.com/Cmrandall86">Github</PageLink>
         </DesktopNavList>
       </Nav>
 
       <MobileNavList $toggleMobileNavLinks={toggleMobileNavLinks}>
-        <PageLink href="./resume" onClick={()=> setToggleMobileNavLinks(false)}>Resume</PageLink>
+        <PageLink href="./" onClick={() => setToggleMobileNavLinks(false)}>
+          Home
+        </PageLink>
+        <PageLink href="./resume" onClick={() => setToggleMobileNavLinks(false)}>
+          Resume
+        </PageLink>
+        <PageLink href="./projects" onClick={() => setToggleMobileNavLinks(false)}>
+          Projects
+        </PageLink>
+        <PageLink href="https://github.com/Cmrandall86" onClick={() => setToggleMobileNavLinks(false)}>
+          Github
+        </PageLink>
       </MobileNavList>
     </NavWrapper>
   );
@@ -51,15 +65,14 @@ export default function NavBar() {
 
 const HamburgerIcon = ({ onClick }) => {
   return (
-    <button 
-    onClick={onClick}
-    style={{
-      border: 'none',
-      background: 'transparent',
-      padding: '0 10px',
-      cursor: 'pointer'
-    }}
-    
+    <button
+      onClick={onClick}
+      style={{
+        border: "none",
+        background: "transparent",
+        padding: "0 10px",
+        cursor: "pointer",
+      }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -90,6 +103,7 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 0;
+  background: #fff;
 `;
 
 const Nav = styled.div`
@@ -107,6 +121,7 @@ const LogoWrapper = styled.div`
   ${mediaQueries("min", "md")} {
     height: 50px;
     width: 317px;
+    padding-top: 15px;
   }
 `;
 
@@ -143,6 +158,7 @@ const MobileNavList = styled.ul`
   position: absolute;
 
   display: ${({ $toggleMobileNavLinks }) => ($toggleMobileNavLinks ? "flex" : `none`)};
+  flex-direction: column;
 `;
 
 const DesktopNavList = styled.ul.attrs({
