@@ -8,6 +8,7 @@ import { Card } from "@mui/material";
 export default function page() {
   return (
     <ProjectPageWrap>
+      <NavHide/>
       <h2 style={{marginLeft: 20}}>Projects</h2>
       <ProjectCard>
         <CardTitle>NBA Scores APP</CardTitle>
@@ -90,10 +91,18 @@ const ProjectPageWrap = styled.div`
   justify-content: center;
   flex-direction: column;
   position: relative;
-  top: 76px;
   font-family: var(--font-poppins);
 `;
 
 const CardLink = styled(Link)`
   text-decoration: none;
 `;
+
+const NavHide = styled.div`
+  position: sticky;
+  top:0;
+  width: 100vw;
+  background: white;
+  height: 75px;
+
+`
