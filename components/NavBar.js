@@ -147,7 +147,7 @@ const HamburgerWrapper = styled.div`
 
 const MobileNavList = styled.ul`
   font-weight: bolder;
-  height: 20vh;
+  height: fit-content;
   width: 100%;
   z-index: 1;
   line-height: 50px;
