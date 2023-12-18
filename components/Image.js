@@ -37,7 +37,7 @@ export default function ResponsiveImage({
             quality={90}
             priority={priority}
             style={{
-              objectFit: 'cover',
+              objectFit: 'fill',
               maxHeight: maxHeight,
             }}
             sizes={sizes}
