@@ -83,7 +83,6 @@ const Content = styled.div`
 `;
 
 const HomePageWrapper = styled.div`
-  height: 100vh;
   display: flex;
   justify-content: center;
   font-family: var(--font-poppins);
