@@ -11,7 +11,7 @@ export default function page() {
       <NavHide/>
       <h2 style={{marginLeft: 20}}>Projects</h2>
       <ProjectCard>
-        <CardTitle>NBA Scores APP</CardTitle>
+        <CardTitle>NBA Scores App</CardTitle>
         <ToolsUsed>Tools used:</ToolsUsed>
         <ul>
           <li>React built with Vite</li>
@@ -22,6 +22,21 @@ export default function page() {
           <br />
           <CardLink href={"https://crandall-nba-scores.netlify.app/"}>
             <li>Link to project: https://crandall-nba-scores.netlify.app/</li>
+          </CardLink>
+        </ul>
+      </ProjectCard>
+      <ProjectCard>
+      <CardTitle>Country Data App</CardTitle>
+        <ToolsUsed>Tools used:</ToolsUsed>
+        <ul>
+          <li>React built with Vite</li>
+          <li>GraphQL</li>
+          <li>Apollo Client</li>
+          <li>Material UI</li>
+          <li>Styled components</li>
+          <br />
+          <CardLink href={"https://graphql-countries.netlify.app/"}>
+            <li>Link to project: https://graphql-countries.netlify.app/</li>
           </CardLink>
         </ul>
       </ProjectCard>

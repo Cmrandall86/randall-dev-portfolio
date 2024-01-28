@@ -76,9 +76,11 @@ const Content = styled.div`
   max-width: 1240px;
   width: 100%;
   margin-inline: 30px;
+  margin-top: 80px;
 
   ${mediaQueries("max", "md")} {
     flex-direction: column-reverse;
+    margin-top: 0;
   }
 `;
 
