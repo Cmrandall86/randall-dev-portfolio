@@ -48,17 +48,17 @@ export default function NavBar() {
 
       <ul className="mobile-nav-list" style={{ display: toggleMobileNavLinks ? "block" : "none" }}>
         <li>
-          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
+          <Link href="/" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
             Home
           </Link>
         </li>
         <li>
-          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
+          <Link href="/resume" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
             Resume
           </Link>
         </li>
         <li>
-          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
+          <Link href="/projects" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
             Projects
           </Link>
         </li>
