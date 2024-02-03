@@ -1,0 +1,33 @@
+// styles.scss
+
+$fontPoppins: var(--font-poppins);
+
+.project-card {
+  padding: 20px;
+  margin: 0 20px 30px 20px;
+
+  ul {
+    list-style: none;
+    padding: 0 10px;
+  }
+}
+
+.project-page-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  font-family: #{$fontPoppins};
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.nav-hide {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background: white;
+  height: 75px;
+}

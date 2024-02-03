@@ -1,0 +1,80 @@
+// styles/_nav.scss
+
+$font-barlow: var(--font-barlow);
+
+.navWrapper {
+  height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.logo-wrapper {
+  height: 50px;
+  width: 190px;
+  margin-inline: 10px;
+
+  @media(min-width: '768px') {
+    height: 50px;
+    width: 317px;
+    padding-top: 15px;
+  }
+}
+
+.page-link {
+  height: fit-content;
+  font-family: $font-barlow;
+  padding-right: 20px;
+  text-decoration: none;
+
+  &:hover {
+    color: blue;
+  }
+}
+
+.hamburger-wrapper {
+  display: block;
+  width: fit-content;
+  padding-top: 10px;
+
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-nav-list {
+  font-weight: bolder;
+  height: fit-content;
+  width: 100%;
+  z-index: 1;
+  line-height: 50px;
+  position: relative;
+  top: 60px;
+  padding: 20px;
+  background: white;
+  position: absolute;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.desktop-nav-list {
+  padding-top: 10px;
+  display: none;
+  right: 10%;
+  list-style-type: none;
+
+  @media(min-width: 728px) {
+    display: flex;
+  }
+}

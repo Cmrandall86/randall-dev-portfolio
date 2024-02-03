@@ -1,9 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import Logo from "./Logo";
-import mediaQueries from "./Breakpoints";
 import Link from "next/link";
 
 export default function NavBar() {
@@ -13,53 +11,69 @@ export default function NavBar() {
     setToggleMobileNavLinks(!toggleMobileNavLinks);
   };
 
-  useEffect(() => {
-    function handleResize() {
-      // Set toggleMobileNavLinks to false when the window is resized
-      setToggleMobileNavLinks(false);
-    }
-
-    // Add a resize event listener
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
-    <NavWrapper>
-      <Nav>
-        <LogoWrapper>
-          <Logo href="/" />
-        </LogoWrapper>
-        <HamburgerWrapper>
+    <div className="navWrapper">
+      <div className="nav">
+        <div className="logo-wrapper">
+          <Link href="/" className="Logo">
+            <Logo />
+          </Link>
+        </div>
+        <div className="hamburger-wrapper">
           <HamburgerIcon onClick={handleClickHamburger} />
-        </HamburgerWrapper>
-        <DesktopNavList>
-          <PageLink href="./">Home</PageLink>
-          <PageLink href="./resume">Resume</PageLink>
-          <PageLink href="./projects">Projects</PageLink>
-          <PageLink href="https://github.com/Cmrandall86">Github</PageLink>
-        </DesktopNavList>
-      </Nav>
+        </div>
+        <ul className="desktop-nav-list">
+          <li>
+            <Link href="./" className="page-link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="./resume" className="page-link">
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link href="./projects" className="page-link">
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link href="https://github.com/Cmrandall86" className="page-link">
+              Github
+            </Link>
+          </li>
+        </ul>
+      </div>
 
-      <MobileNavList $toggleMobileNavLinks={toggleMobileNavLinks}>
-        <PageLink href="./" onClick={() => setToggleMobileNavLinks(false)}>
-          Home
-        </PageLink>
-        <PageLink href="./resume" onClick={() => setToggleMobileNavLinks(false)}>
-          Resume
-        </PageLink>
-        <PageLink href="./projects" onClick={() => setToggleMobileNavLinks(false)}>
-          Projects
-        </PageLink>
-        <PageLink href="https://github.com/Cmrandall86" onClick={() => setToggleMobileNavLinks(false)}>
-          Github
-        </PageLink>
-      </MobileNavList>
-    </NavWrapper>
+      <ul className="mobile-nav-list" style={{ display: toggleMobileNavLinks ? "block" : "none" }}>
+        <li>
+          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false) }>
+            Home
+          </Link>
+        </li>
+        <li>
+        <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false) }>
+            Resume
+          </Link>
+        </li>
+        <li>
+        <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false) }>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://github.com/Cmrandall86"
+            onClick={() => setToggleMobileNavLinks(false)}
+            className="page-link"
+          >
+            Github
+          </Link>
+        </li>
+      </ul>
+    </div>
   );
 }
 
@@ -94,79 +108,3 @@ const HamburgerIcon = ({ onClick }) => {
     </button>
   );
 };
-
-const NavWrapper = styled.nav`
-  height: 75px;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-`;
-
-const Nav = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  max-width: 1240px;
-  margin-inline: auto;
-`;
-
-const LogoWrapper = styled.div`
-  height: 50px;
-  width: 190px;
-
-  ${mediaQueries("min", "md")} {
-    height: 50px;
-    width: 317px;
-    padding-top: 15px;
-  }
-`;
-
-const PageLink = styled(Link)`
-  height: fit-content;
-  font-family: var(--font-barlow);
-  padding-right: 20px;
-  text-decoration: none;
-  &:hover {
-    color: blue;
-  }
-`;
-
-const HamburgerWrapper = styled.div`
-  display: block;
-  width: fit-content;
-  padding-top: 10px;
-
-  ${mediaQueries("min", "md")} {
-    display: none;
-  }
-`;
-
-const MobileNavList = styled.ul`
-  font-weight: bolder;
-  height: fit-content;
-  width: 100%;
-  z-index: 1;
-  line-height: 50px;
-  position: relative;
-  top: 60px;
-  padding: 20px;
-  background: white;
-  position: absolute;
-
-  display: ${({ $toggleMobileNavLinks }) => ($toggleMobileNavLinks ? "flex" : `none`)};
-  flex-direction: column;
-`;
-
-const DesktopNavList = styled.ul.attrs({
-  className: "flex relative",
-})`
-  padding-top: 10px;
-  display: none;
-  right: 10%;
-  ${mediaQueries("min", "md")} {
-    display: flex;
-  }
-`;

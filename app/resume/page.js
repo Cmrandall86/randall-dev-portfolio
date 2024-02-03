@@ -1,19 +1,14 @@
 "use client";
 
 import React from "react";
-import styled from "styled-components";
 import ResponsiveImage from "@components/Image";
-
 import ResumePNG from "/public/Resume.png";
 
 export default function Resume() {
   return (
-    <ResumeWrap>
-      <ResponsiveImage src={ResumePNG} alt="resume" photoAspectRatio="portrait" priority />
-    </ResumeWrap>
+    <div style={{paddingTop: '100px'}}>
+      <ResponsiveImage src={ResumePNG} alt="resume" customAspectRatio="150%" priority />
+    </div>
   );
 }
 
-const ResumeWrap = styled.div`
-  padding-top: 100px;
-`;

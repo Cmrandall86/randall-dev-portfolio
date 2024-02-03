@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import styled from "styled-components";
 import Link from "next/link";
+import '/styles/_projects.scss'
 import { Card } from "@mui/material";
 
 export default function page() {
   return (
-    <ProjectPageWrap>
-      <NavHide/>
-      <h2 style={{marginLeft: 20}}>Projects</h2>
-      <ProjectCard>
-        <CardTitle>NBA Scores App</CardTitle>
-        <ToolsUsed>Tools used:</ToolsUsed>
+    <div className="project-page-wrap">
+      <div className="nav-hide"></div>
+      <h2 style={{ marginLeft: 20 }}>Projects</h2>
+
+      <Card className="project-card">
+        <h3 className="card-title">NBA Scores App</h3>
+        <h4 className="tools-used">Tools used:</h4>
         <ul>
           <li>React built with Vite</li>
           <li>Tailwind</li>
@@ -20,14 +21,15 @@ export default function page() {
           <li>Balldontlie API (free basketball API)</li>
           <li>React Router</li>
           <br />
-          <CardLink href={"https://crandall-nba-scores.netlify.app/"}>
+          <Link href={"https://crandall-nba-scores.netlify.app/"} className="card-link">
             <li>Link to project: https://crandall-nba-scores.netlify.app/</li>
-          </CardLink>
+          </Link>
         </ul>
-      </ProjectCard>
-      <ProjectCard>
-      <CardTitle>Country Data App</CardTitle>
-        <ToolsUsed>Tools used:</ToolsUsed>
+      </Card>
+
+      <Card className="project-card">
+        <h3 className="card-title">Country Data App</h3>
+        <h4 className="tools-used">Tools used:</h4>
         <ul>
           <li>React built with Vite</li>
           <li>GraphQL</li>
@@ -35,89 +37,56 @@ export default function page() {
           <li>Material UI</li>
           <li>Styled components</li>
           <br />
-          <CardLink href={"https://graphql-countries.netlify.app/"}>
+          <Link href={"https://graphql-countries.netlify.app/"} className="card-link">
             <li>Link to project: https://graphql-countries.netlify.app/</li>
-          </CardLink>
+          </Link>
         </ul>
-      </ProjectCard>
-      <h2 style={{marginLeft: 20}}>Professional Work Examples</h2>
-      <ProjectCard>
-        <CardTitle>Oddly Reloved landing page and store pages</CardTitle>
-        <ToolsUsed>Tools used:</ToolsUsed>
+      </Card>
+
+      <h2 style={{ marginLeft: 20 }}>Professional Work Examples</h2>
+
+      <Card className="project-card">
+        <h3 className="card-title">Oddly Reloved landing page and store pages</h3>
+        <h4 className="tools-used">Tools used:</h4>
         <ul>
           <li>React</li>
           <li>Next.js</li>
           <li>Styled components</li>
           <li>Carousel built with Swiper.js</li>
           <br />
-          <CardLink href={"https://oddlyreloved.se/"}>
+          <Link href={"https://oddlyreloved.se/"} className="card-link">
             <li>Link to store: https://oddlyreloved.se/</li>
-          </CardLink>
+          </Link>
         </ul>
-      </ProjectCard>
-      <ProjectCard>
-        <CardTitle>Volant Collection landing page</CardTitle>
-        <ToolsUsed>Tools used:</ToolsUsed>
+      </Card>
+
+      <Card className="project-card">
+        <h3 className="card-title">Volant Collection landing page</h3>
+        <h4 className="tools-used">Tools used:</h4>
         <ul>
           <li>React</li>
           <li>Next.js</li>
           <li>Styled components</li>
           <br />
-          <CardLink href={"https://volantcollection.com"}>
+          <Link href={"https://volantcollection.com"} className="card-link">
             <li>Link to store: https://volantcollection.com</li>
-          </CardLink>
+          </Link>
         </ul>
-      </ProjectCard>
-      <ProjectCard>
-        <CardTitle>Ribbn.com onboarding form</CardTitle>
-        <ToolsUsed>Tools used:</ToolsUsed>
+      </Card>
+
+      <Card className="project-card">
+        <h3 className="card-title">Ribbn.com onboarding form</h3>
+        <h4 className="tools-used">Tools used:</h4>
         <ul>
           <li>React</li>
           <li>Next.js</li>
           <li>Styled components</li>
           <br />
-          <CardLink href={"https://myribbn.com/onboarding"}>
+          <Link href={"https://myribbn.com/onboarding"} className="card-link">
             <li>Link to store: https://myribbn.com/onboarding</li>
-          </CardLink>
+          </Link>
         </ul>
-      </ProjectCard>
-    </ProjectPageWrap>
-  );
+      </Card>
+    </div>
+  )
 }
-
-const ProjectCard = styled(Card)`
-  padding: 20px;
-  margin: 0 20px 30px 20px;
-
-  ul {
-    list-style: none;
-    padding: 0 10px;
-  }
-`;
-
-const CardTitle = styled.h3`
-
-`;
-
-const ToolsUsed = styled.h4``;
-
-const ProjectPageWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  font-family: var(--font-poppins);
-`;
-
-const CardLink = styled(Link)`
-  text-decoration: none;
-`;
-
-const NavHide = styled.div`
-  position: sticky;
-  top:0;
-  width: 100vw;
-  background: white;
-  height: 75px;
-
-`

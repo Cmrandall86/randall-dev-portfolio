@@ -1,0 +1,147 @@
+// _homepage.scss
+
+$font-poppins: var(--font-poppins);
+$font-barlow: var(--font-barlow);
+$font-playfair: var(--font-playfair);
+$color-light: #758398;
+
+
+.HomePageWrapper {
+  display: flex;
+  justify-content: center;
+  font-family: $font-poppins;
+
+  // Background gradient styles
+  .BackgroundGradient {
+    background-image: url('../public/grad.svg');
+    height: 100%;
+    width: 100vw;
+    right: 0;
+    top: 0;
+    opacity: 0.3;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: top right;
+    transition: background 0.3s;
+
+    @media (min-width: '768px') and (max-width: '1240px') {
+      background-size: 450px auto;
+    }
+
+    @media (max-width: '768px') {
+      background-size: 360px auto;
+    }
+
+  }
+
+  // Content styles
+  .Content {
+    display: flex;
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: 30px;
+    margin-top: 80px;
+
+    @media (max-width: '768px') {
+      flex-direction: column-reverse;
+      margin-top: 0;
+    }
+  }
+
+  // Left side styles
+  .LS {
+    width: 50%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: '768px') {
+      width: 100%;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+
+  // Right side styles
+  .RS {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: '768px') {
+      width: 100%;
+      justify-content: center;
+    }
+
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  // ImageWrap styles
+  .ImageWrap {
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+
+
+    @media (min-width: '768px') and (max-width: '1240px') {
+      width: 80%;
+      padding-top: 0;
+    }
+
+    @media (max-width: '768px') {
+      width: 90%;
+    }
+  }
+
+  // PreTitle styles
+  .PreTitle {
+    height: fit-content;
+    color: $color-light;
+    font-family: $font-barlow;
+    font-weight: 500;
+  }
+
+  // SubTitle styles
+  .SubTitle {
+    height: fit-content;
+    font-size: 20px;
+    font-family: $font-playfair;
+    color: $color-light;
+    margin-bottom: 40px;
+  }
+
+  // Divider styles
+  .Divider {
+    border-bottom: 2px solid $color-light;
+    height: 2px;
+    width: 60px;
+    margin: 15px 0 30px 0;
+
+  }
+
+  // Title styles
+  .Title {
+    font-size: clamp(40px, 5.145vw, 64px);
+    font-family: $font-playfair;
+  }
+
+  // Contact styles
+  .Contact {
+    font-size: 20px;
+    font-family: $font-barlow;
+    display: flex;
+    cursor: pointer;
+    gap: 30px;
+    align-items: flex-end;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 20px;
+    z-index: 1200;
+    text-decoration: none;
+    align-items: center;
+  }
+}

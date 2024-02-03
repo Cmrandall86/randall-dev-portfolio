@@ -486,7 +486,6 @@
     "safe-buffer": "^5.2.1",
     "safe-regex-test": "^1.0.0",
     "safer-buffer": "^2.1.2",
-    "sass": "^1.69.3",
     "scheduler": "^0.23.0",
     "scroll-into-view-if-needed": "^3.0.10",
     "semver": "^7.5.4",
@@ -603,5 +602,8 @@
     "export": "next export"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
 }

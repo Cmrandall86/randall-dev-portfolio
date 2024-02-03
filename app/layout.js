@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Theme_Provider from "providers/Theme_Provider";
-import "styles/globals.css";
+import "styles/globals.scss";
+import "styles/_navbar.scss"
 import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 
@@ -35,11 +35,9 @@ export default function layout({ children }) {
           style={{ height: "100vh"}}
           className={`${poppins.variable} ${playfair.variable} ${barlow.variable} `}
         >
-          <Theme_Provider>
-            <NavBar />
+            <NavBar/>
             <div style={{ maxWidth: "1240px", margin: "0 auto"}}>{children}</div>
             {/* <Footer/> */}
-          </Theme_Provider>
         </main>
       </body>
     </html>
