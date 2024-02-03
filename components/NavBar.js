@@ -24,17 +24,17 @@ export default function NavBar() {
         </div>
         <ul className="desktop-nav-list">
           <li>
-            <Link href="./" className="page-link">
+            <Link href="/" className="page-link">
               Home
             </Link>
           </li>
           <li>
-            <Link href="./resume" className="page-link">
+            <Link href="/resume" className="page-link">
               Resume
             </Link>
           </li>
           <li>
-            <Link href="./projects" className="page-link">
+            <Link href="/projects" className="page-link">
               Projects
             </Link>
           </li>
