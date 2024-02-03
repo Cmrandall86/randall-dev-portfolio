@@ -20,10 +20,12 @@ export default function HomePage() {
             <h2 className={styles.Title}>Chris Randall</h2>
             <span className={styles.SubTitle}>Web Developer</span>
             <Link href="https://www.linkedin.com/in/chris-randall-1b2919167/" className={styles.Contact}>
-              <LinkedIn_icon /> LinkedIn Profile
+              <LinkedIn_icon />
+              LinkedIn Profile
             </Link>
             <Link href="mailto:cmrandall86@gmail.com" className={styles.Contact}>
-              <Mail_icon /> Cmrandall86@gmail.com
+              <Mail_icon />
+              Cmrandall86@gmail.com
             </Link>
           </div>
         </div>

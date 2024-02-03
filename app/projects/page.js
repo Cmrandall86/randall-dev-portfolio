@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import '/styles/_projects.scss'
+import "/styles/_projects.scss";
 import { Card } from "@mui/material";
 
 export default function page() {
@@ -21,9 +21,11 @@ export default function page() {
           <li>Balldontlie API (free basketball API)</li>
           <li>React Router</li>
           <br />
-          <Link href={"https://crandall-nba-scores.netlify.app/"} className="card-link">
-            <li>Link to project: https://crandall-nba-scores.netlify.app/</li>
-          </Link>
+          <li>
+            <Link href={"https://crandall-nba-scores.netlify.app/"} className="card-link">
+              Link to project: https://crandall-nba-scores.netlify.app/
+            </Link>
+          </li>
         </ul>
       </Card>
 
@@ -37,9 +39,11 @@ export default function page() {
           <li>Material UI</li>
           <li>Styled components</li>
           <br />
-          <Link href={"https://graphql-countries.netlify.app/"} className="card-link">
-            <li>Link to project: https://graphql-countries.netlify.app/</li>
-          </Link>
+          <li>
+            <Link href={"https://graphql-countries.netlify.app/"} className="card-link">
+              Link to project: https://graphql-countries.netlify.app/
+            </Link>
+          </li>
         </ul>
       </Card>
 
@@ -54,9 +58,11 @@ export default function page() {
           <li>Styled components</li>
           <li>Carousel built with Swiper.js</li>
           <br />
-          <Link href={"https://oddlyreloved.se/"} className="card-link">
-            <li>Link to store: https://oddlyreloved.se/</li>
-          </Link>
+          <li>
+            <Link href={"https://oddlyreloved.se/"} className="card-link">
+              Link to store: https://oddlyreloved.se/
+            </Link>
+          </li>
         </ul>
       </Card>
 
@@ -68,9 +74,11 @@ export default function page() {
           <li>Next.js</li>
           <li>Styled components</li>
           <br />
-          <Link href={"https://volantcollection.com"} className="card-link">
-            <li>Link to store: https://volantcollection.com</li>
-          </Link>
+          <li>
+            <Link href={"https://volantcollection.com"} className="card-link">
+              Link to store: https://volantcollection.com
+            </Link>
+          </li>
         </ul>
       </Card>
 
@@ -82,11 +90,13 @@ export default function page() {
           <li>Next.js</li>
           <li>Styled components</li>
           <br />
-          <Link href={"https://myribbn.com/onboarding"} className="card-link">
-            <li>Link to store: https://myribbn.com/onboarding</li>
-          </Link>
+          <li>
+            <Link href={"https://myribbn.com/onboarding"} className="card-link">
+              Link to store: https://myribbn.com/onboarding
+            </Link>
+          </li>
         </ul>
       </Card>
     </div>
-  )
+  );
 }

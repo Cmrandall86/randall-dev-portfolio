@@ -11,7 +11,6 @@ export default function NavBar() {
     setToggleMobileNavLinks(!toggleMobileNavLinks);
   };
 
-
   return (
     <div className="navWrapper">
       <div className="nav">
@@ -49,17 +48,17 @@ export default function NavBar() {
 
       <ul className="mobile-nav-list" style={{ display: toggleMobileNavLinks ? "block" : "none" }}>
         <li>
-          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false) }>
+          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
             Home
           </Link>
         </li>
         <li>
-        <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false) }>
+          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
             Resume
           </Link>
         </li>
         <li>
-        <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false) }>
+          <Link href="./" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
             Projects
           </Link>
         </li>
