@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
 
@@ -10,6 +10,21 @@ export default function NavBar() {
   const handleClickHamburger = () => {
     setToggleMobileNavLinks(!toggleMobileNavLinks);
   };
+
+  useEffect(() => {
+    function handleResize() {
+      // Set toggleMobileNavLinks to false when the window is resized
+      setToggleMobileNavLinks(false);
+    }
+
+    // Add a resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="navWrapper">
