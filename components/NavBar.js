@@ -35,7 +35,17 @@ export default function NavBar() {
           </Link>
         </div>
         <div className="hamburger-wrapper">
-          <HamburgerIcon onClick={handleClickHamburger} />
+        <button
+      className={`hamburger hamburger--3dx ${toggleMobileNavLinks ? 'is-active' : ''}`}
+      type="button"
+      aria-label="Menu"
+      aria-controls="navigation"
+      onClick={handleClickHamburger}
+    >
+      <span className="hamburger-box">
+        <span className="hamburger-inner"></span>
+      </span>
+    </button>
         </div>
         <ul className="desktop-nav-list">
           <li>

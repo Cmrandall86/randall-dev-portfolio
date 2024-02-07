@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import styles from "./styles.module.scss";
 import ProfilePic from "../public/Chris_Randall.jpg";
 import ResponsiveImage from "@components/Image";
@@ -8,6 +8,7 @@ import Mail_icon from "public/Mail_icon";
 import Link from "next/link";
 
 export default function HomePage() {
+
   return (
     <div className={styles.HomePageWrapper}>
       <div className={styles.BackgroundGradient}></div>

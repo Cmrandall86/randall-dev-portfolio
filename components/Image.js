@@ -19,7 +19,7 @@ export default function ResponsiveImage({
         <figure
           className={''}
           style={{
-            paddingTop: photoAspectRatio === 'square' ? '100%' : photoAspectRatio === 'landscape' ? '133%' : customAspectRatio ? customAspectRatio : '70%'
+            position: 'relative', paddingTop: photoAspectRatio === 'square' ? '100%' : photoAspectRatio === 'landscape' ? '133%' : customAspectRatio ? customAspectRatio : '70%'
           }}
         >
           <Image
