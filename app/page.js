@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+
 import styles from "./styles.module.scss";
 import ProfilePic from "../public/Chris_Randall.jpg";
 import ResponsiveImage from "@components/Image";
@@ -8,7 +8,6 @@ import Mail_icon from "public/Mail_icon";
 import Link from "next/link";
 
 export default function HomePage() {
-
   return (
     <div className={styles.HomePageWrapper}>
       <div className={styles.BackgroundGradient}></div>
@@ -19,7 +18,7 @@ export default function HomePage() {
             <div className={styles.Divider}></div>
 
             <h2 className={styles.Title}>Chris Randall</h2>
-            <span className={styles.SubTitle}>Web Developer</span>
+            <div className={styles.SubTitle}>Web Developer</div>
             <Link href="https://www.linkedin.com/in/chris-randall-1b2919167/" className={styles.Contact}>
               <LinkedIn_icon />
               LinkedIn Profile

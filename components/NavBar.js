@@ -30,7 +30,7 @@ export default function NavBar() {
     <div className="navWrapper">
       <div className="nav">
         <div className="logo-wrapper">
-          <Link href="/" className="Logo">
+          <Link href="/">
             <Logo />
           </Link>
         </div>
@@ -49,7 +49,7 @@ export default function NavBar() {
         </div>
         <ul className="desktop-nav-list">
           <li>
-            <Link href="/" className="page-link">
+            <Link href="/" className="page-link" >
               Home
             </Link>
           </li>

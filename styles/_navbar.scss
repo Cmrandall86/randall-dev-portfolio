@@ -4,7 +4,7 @@ $font-barlow: var(--font-barlow);
 
 .navWrapper {
   height: 75px;
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 100;
   display: flex;
@@ -18,29 +18,34 @@ $font-barlow: var(--font-barlow);
   justify-content: space-between;
   max-width: 1240px;
   margin-inline: auto;
+  height: 75px;
 }
 
 .logo-wrapper {
   height: 50px;
   width: 190px;
-  margin-inline: 10px;
+  margin: 10px;
 
   @media(min-width: '768px') {
     height: 50px;
     width: 317px;
-    padding-top: 15px;
+    margin-top: 15px;
   }
 }
 
 .page-link {
+  text-transform: uppercase;
   height: fit-content;
   font-family: $font-barlow;
-  padding-right: 20px;
+  padding-right: 40px;
   text-decoration: none;
+  font-weight: 400;
+  color: black;
 
   &:hover {
     color: blue;
   }
+
 }
 
 .hamburger-wrapper {
@@ -55,7 +60,7 @@ $font-barlow: var(--font-barlow);
 
 .mobile-nav-list {
   font-weight: bolder;
-  height: fit-content;
+  height: 50vh;
   width: 100%;
   z-index: 1;
   line-height: 50px;
@@ -66,6 +71,7 @@ $font-barlow: var(--font-barlow);
   position: absolute;
   flex-direction: column;
   list-style-type: none;
+  font-family: $font-barlow;
 }
 
 .desktop-nav-list {
@@ -74,7 +80,7 @@ $font-barlow: var(--font-barlow);
   right: 10%;
   list-style-type: none;
 
-  @media(min-width: 728px) {
+  @media(min-width: 768px) {
     display: flex;
   }
 }
