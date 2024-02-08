@@ -82,7 +82,7 @@ $color-light: #758398;
   .ImageWrap {
     width: 100%;
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 
 
     @media (min-width: '768px') and (max-width: '1240px') {
@@ -108,7 +108,7 @@ $color-light: #758398;
     font-family: $font-playfair;
     color: $color-light;
     margin-bottom: 100px;
-    font-size: clamp(26px, 2.419vw, 35px);
+    font-size: clamp(22px, 2.419vw, 35px);
 
 
     @media (max-width: '768px') {
