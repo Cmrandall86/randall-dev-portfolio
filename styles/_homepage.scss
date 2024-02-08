@@ -35,7 +35,6 @@ $color-light: #758398;
     @media (max-width: '768px') {
       background-size: 360px auto;
     }
-
   }
 
   // Content styles
@@ -49,7 +48,6 @@ $color-light: #758398;
       flex-direction: column-reverse;
       margin-top: 0;
     }
-
   }
 
   // Left side styles
@@ -159,4 +157,8 @@ $color-light: #758398;
     align-items: start;
     margin-top: 180px;
   }
+}
+
+.AboutMe {
+  background: red;
 }

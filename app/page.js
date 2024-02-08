@@ -9,6 +9,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
+    <>
     <div className={styles.HomePageWrapper}>
       <div className={styles.BackgroundGradient}></div>
       <div className={styles.Content}>
@@ -36,5 +37,7 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+
+    </>
   );
 }
