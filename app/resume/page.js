@@ -6,7 +6,7 @@ import ResumePNG from "/public/Resume.png";
 
 export default function Resume() {
   return (
-    <div style={{ paddingTop: "50px" }}>
+    <div style={{ width: '90vw', maxWidth: '1024px' }}>
       <ResponsiveImage src={ResumePNG} alt="resume" customAspectRatio="150%" priority />
     </div>
   );

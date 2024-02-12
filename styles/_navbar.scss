@@ -23,13 +23,13 @@ $font-barlow: var(--font-barlow);
 
 .logo-wrapper {
   height: 50px;
-  width: 190px;
-  margin: 10px;
+  width: 317px;
+  margin-top: 15px;
 
-  @media(min-width: '768px') {
+  @media(max-width: '768px') {
     height: 50px;
-    width: 317px;
-    margin-top: 15px;
+    width: 190px;
+    margin: 10px;
   }
 }
 

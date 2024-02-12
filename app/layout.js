@@ -3,6 +3,7 @@
 import React from "react";
 import "styles/globals.scss";
 import "styles/_navbar.scss"
+import styles from "./styles.module.scss";
 import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 
@@ -32,11 +33,10 @@ export default function layout({ children }) {
       <head></head>
       <body>
         <main
-          style={{ height: "100vh"}}
-          className={`${poppins.variable} ${playfair.variable} ${barlow.variable} `}
+          className={`${poppins.variable} ${playfair.variable} ${barlow.variable} flex `}
         >
             <NavBar/>
-            <div style={{ maxWidth: "1240px", margin: "0 auto"}}>{children}</div>
+            <div style={{ maxWidth: "1240px", margin: "0 auto"}} className={styles.MobileCentering}>{children}</div>
             {/* <Footer/> */}
         </main>
       </body>

@@ -14,7 +14,7 @@ export default function ResponsiveImage({
 }) {
 
   return (
-    <section style={{ width: "100%", position: "relative" }}>
+    <section>
       <div>
         <figure
           className={''}

@@ -27,8 +27,8 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="navWrapper">
-      <div className="nav">
+    <header className="navWrapper">
+      <nav className="nav">
         <div className="logo-wrapper">
           <Link href="/">
             <Logo />
@@ -69,7 +69,7 @@ export default function NavBar() {
             </Link>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <ul className="mobile-nav-list" style={{ display: toggleMobileNavLinks ? "block" : "none" }}>
         <li>
@@ -97,38 +97,6 @@ export default function NavBar() {
           </Link>
         </li>
       </ul>
-    </div>
+    </header>
   );
 }
-
-const HamburgerIcon = ({ onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      style={{
-        border: "none",
-        background: "transparent",
-        padding: "0 10px",
-        cursor: "pointer",
-      }}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="icon icon-tabler icon-tabler-menu-2"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        strokeWidth="2"
-        stroke="currentColor"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <line x1="4" y1="6" x2="20" y2="6" />
-        <line x1="4" y1="12" x2="20" y2="12" />
-        <line x1="4" y1="18" x2="20" y2="18" />
-      </svg>
-    </button>
-  );
-};
