@@ -43,8 +43,17 @@ export default function HomePage() {
             <div className={styles.PreTitle}>ABOUT ME</div>
             <div className={styles.Divider} />
             <div className={styles.Summary}>
-              Experienced Full Stack Web Developer with a specialization in front-end development using React and
-              JavaScript.
+              I am an experienced full stack web developer with a specialization in front-end development using React
+              and JavaScript.
+            </div>
+            <div className={styles.Columns}>
+              <div className={styles.SummaryTitle}>I build web apps & software solutions.</div>
+              <div className={styles.Column}>
+                As a software engineer, I specialize in front-end web development using JavaScript and React. My passion
+                for learning and improving my skills drives me to continuously seek new challenges and opportunities to
+                grow. I am committed to bringing value to my team and contributing to the success of any project I work
+                on.
+              </div>
             </div>
           </div>
         </div>
