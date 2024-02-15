@@ -43,8 +43,7 @@ export default function HomePage() {
             <div className={styles.PreTitle}>ABOUT ME</div>
             <div className={styles.Divider} />
             <div className={styles.Summary}>
-              I am an experienced full stack web developer with a specialization in front-end development using React
-              and JavaScript.
+              I am an experienced full stack web developer based in Albuquerque, New Mexico with 2 years of professional experience.
             </div>
             <div className={styles.Columns}>
               <div className={styles.SummaryTitle}>I build web apps & software solutions.</div>
