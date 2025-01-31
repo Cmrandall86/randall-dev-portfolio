@@ -12,14 +12,19 @@ $section-spacing: 2rem;
 $item-spacing: 1.5rem;
 
 .resumeContainer {
-  max-width: 900px;
-  margin: $section-spacing auto;
-  padding: 0 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .downloadSection {
   text-align: right;
-  margin-bottom: $section-spacing;
+  margin: $section-spacing 0;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .downloadButton {
@@ -41,9 +46,11 @@ $item-spacing: 1.5rem;
 
 .resume {
   background: $background-white;
-  padding: $section-spacing;
+  padding: $section-spacing ($section-spacing * 1.5);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 4rem);
+  max-width: 1100px;
 }
 
 // Header Styles
@@ -75,6 +82,10 @@ $item-spacing: 1.5rem;
     &:hover {
       text-decoration: underline;
     }
+  }
+  
+  .divider {
+    color: $light-gray;
   }
 }
 
@@ -191,7 +202,7 @@ $item-spacing: 1.5rem;
 // Skills Grid
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: $section-spacing;
   
   .skillCategory {
@@ -239,18 +250,47 @@ $item-spacing: 1.5rem;
     color: $light-gray;
     font-size: 0.9rem;
     font-family: $font-inter;
+    margin-bottom: $item-spacing * 0.5;
+  }
+
+  .degrees {
+    .degree {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: $item-spacing * 0.5;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      .degreeYear {
+        color: $light-gray;
+        font-family: $font-inter;
+        font-size: 0.9rem;
+        min-width: 45px;
+      }
+      
+      p {
+        color: $text-color;
+        font-family: $font-inter;
+        font-size: $base-font-size;
+        margin: 0;
+      }
+    }
   }
 }
 
 // Responsive Design
 @media (max-width: 768px) {
   .resumeContainer {
-    padding: 0 1rem;
-    margin: ($section-spacing * 0.5) auto;
+    margin: 0 auto;
+    padding: 0 1.2rem 0 0.8rem;
   }
   
   .resume {
-    padding: $section-spacing ($section-spacing * 0.75);
+    padding: $section-spacing 1.25rem;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
   }
   
   .header h1 {
@@ -260,7 +300,15 @@ $item-spacing: 1.5rem;
   .contactInfo {
     flex-direction: column;
     align-items: center;
-    gap: $item-spacing * 0.3;
+    gap: $item-spacing * 0.4;
+    
+    .divider {
+      display: none;
+    }
+    
+    a {
+      padding: 0.3rem 0;
+    }
   }
   
   .jobMeta {
@@ -282,6 +330,37 @@ $item-spacing: 1.5rem;
     
     .projectDate {
       margin-left: 0;
+    }
+  }
+
+  .skillsGrid {
+    gap: $item-spacing * 0.5;
+    grid-template-columns: 1fr;
+    
+    .skillCategory {
+      margin-bottom: $item-spacing * 0.3;
+      
+      h4 {
+        margin-bottom: $item-spacing * 0.15;
+      }
+    }
+  }
+
+  .downloadSection {
+    padding: 0;
+    margin: ($section-spacing * 0.75) 0;
+  }
+
+  .education {
+    .degrees {
+      .degree {
+        flex-direction: column;
+        gap: 0.3rem;
+        
+        .degreeYear {
+          color: $light-gray;
+        }
+      }
     }
   }
 } 

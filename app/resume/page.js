@@ -21,9 +21,11 @@ export default function Resume() {
         <header className={styles.header}>
           <h1>Christopher Randall</h1>
           <div className={styles.contactInfo}>
-            <a href="mailto:cmrandall86@gmail.com">cmrandall86@gmail.com</a> |
-            <a href="https://www.chrisrandall.dev"> www.chrisrandall.dev </a> |
-            <a href="https://www.linkedin.com/in/chris-randall-dev/"> linkedin.com/in/chris-randall-dev</a>
+            <a href="mailto:cmrandall86@gmail.com">cmrandall86@gmail.com</a>
+            <span className={styles.divider}>|</span>
+            <a href="https://www.chrisrandall.dev">www.chrisrandall.dev</a>
+            <span className={styles.divider}>|</span>
+            <a href="https://www.linkedin.com/in/chris-randall-dev/">linkedin.com/in/chris-randall-dev</a>
           </div>
         </header>
 
@@ -134,15 +136,17 @@ export default function Resume() {
               <h3>Central New Mexico Community College</h3>
               <div className={styles.educationMeta}>
                 <span>Albuquerque, NM</span>
-                <span>2021</span>
               </div>
-              <p>Certificate in Computer Information Systems: Web Programming</p>
-            </div>
-            <div className={styles.educationItem}>
-              <div className={styles.educationMeta}>
-                <span>2008</span>
+              <div className={styles.degrees}>
+                <div className={styles.degree}>
+                  <span className={styles.degreeYear}>2021</span>
+                  <p>Certificate in Computer Information Systems: Web Programming</p>
+                </div>
+                <div className={styles.degree}>
+                  <span className={styles.degreeYear}>2008</span>
+                  <p>Associate of Business Management</p>
+                </div>
               </div>
-              <p>Associate of Business Management</p>
             </div>
           </div>
         </section>
