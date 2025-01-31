@@ -95,11 +95,11 @@ export default function HomePage() {
             <h3>My Journey</h3>
             <p>
               Starting with a foundation in business management and transitioning to web development, 
-              I've grown into a versatile developer specializing in creating dynamic, responsive web 
+              I&apos;ve grown into a versatile developer specializing in creating dynamic, responsive web 
               applications. I excel at building robust CMS-type applications, collaborating with 
               cross-functional teams, and implementing complex user interfaces. My experience includes 
               developing scalable solutions for various clients, from e-commerce platforms to 
-              government agency applications. I'm committed to writing clean code, optimizing 
+              government agency applications. I&apos;m committed to writing clean code, optimizing 
               performance, and delivering exceptional user experiences.
             </p>
           </div>
