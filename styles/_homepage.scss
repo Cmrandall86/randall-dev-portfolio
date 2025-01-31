@@ -181,9 +181,10 @@ $color-light: #758398;
     }
 
     .Summary {
-      font-size: clamp(28px, 3.871vw, 48px);
-      font-family: $font-playfair;
-      margin: 0;
+      // Remove or comment out these styles since we'll use the ones from styles.module.scss
+      // font-size: clamp(28px, 3.871vw, 48px);
+      // font-family: $font-playfair;
+      // margin: 0;
     }
 
     .Columns {

@@ -101,7 +101,7 @@ $font-barlow: var(--font-barlow);
   background: $nav-background;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 3000;
 }
 
 // Main Navigation Container
@@ -117,20 +117,39 @@ $font-barlow: var(--font-barlow);
 
 // Logo Styles
 .nav-logo {
-  height: 50px;
+  height: 52px;
   z-index: 2;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
   
-  img {
-    height: 100%;
+  svg {
+    height: 34px;
     width: auto;
+    
+    path:first-child {
+      color: $nav-active-color;
+    }
+    
+    path:last-child {
+      color: #333;
+    }
+
+    text {
+      font-size: 120%;
+    }
   }
 
   @media (max-width: $mobile-breakpoint) {
-    height: 40px;
-  }
-
-  @media (max-width: 480px) {
-    height: 35px;
+    height: 45px;
+    
+    svg {
+      height: 28px;
+      
+      text {
+        font-size: 120%;
+      }
+    }
   }
 }
 

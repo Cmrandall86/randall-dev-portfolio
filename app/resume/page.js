@@ -48,7 +48,7 @@ export default function Resume() {
               <div className={styles.jobMeta}>
                 <span className={styles.position}>Front-end Developer</span>
                 <span className={styles.location}>Albuquerque, NM</span>
-                <span className={styles.dates}>Feb 2024 – Present</span>
+                <span className={styles.dates}>Feb 2024 - Present</span>
               </div>
             </div>
             <ul className={styles.bulletList}>
@@ -69,7 +69,7 @@ export default function Resume() {
               <div className={styles.jobMeta}>
                 <span className={styles.position}>Software Developer</span>
                 <span className={styles.location}>Remote</span>
-                <span className={styles.dates}>May 2022 – February 2024</span>
+                <span className={styles.dates}>May 2022 - February 2024</span>
               </div>
             </div>
             <ul className={styles.bulletList}>

@@ -4,9 +4,9 @@ $accent-color: #0070f3;
 $text-color: #4a5568;
 $light-gray: #666;
 $background-white: #ffffff;
-$font-roboto: var(--font-roboto);
-$font-inter: var(--font-inter);
-$base-font-size: 0.95rem;
+$font-heading: var(--font-poppins);
+$font-body: var(--font-barlow);
+$base-font-size: 0.875rem;
 $base-line-height: 1.6;
 $section-spacing: 2rem;
 $item-spacing: 1.5rem;
@@ -35,7 +35,7 @@ $item-spacing: 1.5rem;
   text-decoration: none;
   border-radius: 4px;
   transition: all 0.3s ease;
-  font-family: $font-inter;
+  font-family: $font-body;
   font-size: 0.9rem;
   
   &:hover {
@@ -59,10 +59,10 @@ $item-spacing: 1.5rem;
   margin-bottom: $section-spacing * 1.5;
   
   h1 {
+    font-family: $font-heading;
     font-size: 2.2rem;
     margin-bottom: $item-spacing;
-    font-family: $font-roboto;
-    font-weight: 700;
+    font-weight: 600;
     color: $primary-color;
   }
 }
@@ -72,7 +72,7 @@ $item-spacing: 1.5rem;
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  font-family: $font-inter;
+  font-family: $font-body;
   
   a {
     color: $accent-color;
@@ -94,9 +94,9 @@ $item-spacing: 1.5rem;
   margin-bottom: $section-spacing;
   
   h2 {
+    font-family: $font-heading;
     color: $primary-color;
-    font-family: $font-roboto;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.2rem;
     letter-spacing: 0.5px;
     border-bottom: 2px solid $accent-color;
@@ -105,10 +105,11 @@ $item-spacing: 1.5rem;
   }
 
   p {
-    font-family: $font-inter;
+    font-family: $font-body;
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $text-color;
+    font-weight: 400;
   }
 }
 
@@ -126,7 +127,7 @@ $item-spacing: 1.5rem;
   gap: 1rem;
   
   h3 {
-    font-family: $font-roboto;
+    font-family: $font-heading;
     font-weight: 500;
     color: $primary-color;
     font-size: 1.1rem;
@@ -138,7 +139,7 @@ $item-spacing: 1.5rem;
   gap: 1.5rem;
   color: $light-gray;
   font-size: 0.9rem;
-  font-family: $font-inter;
+  font-family: $font-body;
   
   .position {
     font-weight: 500;
@@ -153,7 +154,7 @@ $item-spacing: 1.5rem;
 .projectLink {
   color: $accent-color;
   text-decoration: none;
-  font-family: $font-inter;
+  font-family: $font-body;
   font-size: $base-font-size;
   
   &:hover {
@@ -163,7 +164,7 @@ $item-spacing: 1.5rem;
 
 .projectDate {
   color: $light-gray;
-  font-family: $font-inter;
+  font-family: $font-body;
   font-size: 0.9rem;
   margin-left: auto;
 }
@@ -173,7 +174,7 @@ $item-spacing: 1.5rem;
   list-style-type: none;
   padding-left: 1.2rem;
   margin-top: $item-spacing * 0.5;
-  font-family: $font-inter;
+  font-family: $font-body;
   
   li {
     margin-bottom: $item-spacing * 0.5;
@@ -207,17 +208,17 @@ $item-spacing: 1.5rem;
   
   .skillCategory {
     h4 {
+      font-family: $font-heading;
       color: $primary-color;
-      font-family: $font-roboto;
       font-weight: 500;
       font-size: 1rem;
       margin-bottom: $item-spacing * 0.5;
     }
     
     p {
+      font-family: $font-body;
       color: $text-color;
       line-height: $base-line-height;
-      font-family: $font-inter;
       font-size: $base-font-size;
     }
   }
@@ -229,7 +230,7 @@ $item-spacing: 1.5rem;
     margin-bottom: $item-spacing;
     
     h3 {
-      font-family: $font-roboto;
+      font-family: $font-heading;
       font-weight: 500;
       color: $primary-color;
       font-size: 1.1rem;
@@ -237,8 +238,8 @@ $item-spacing: 1.5rem;
     }
     
     p {
+      font-family: $font-body;
       color: $text-color;
-      font-family: $font-inter;
       font-size: $base-font-size;
       margin-top: $item-spacing * 0.2;
     }
@@ -249,7 +250,7 @@ $item-spacing: 1.5rem;
     justify-content: space-between;
     color: $light-gray;
     font-size: 0.9rem;
-    font-family: $font-inter;
+    font-family: $font-body;
     margin-bottom: $item-spacing * 0.5;
   }
 
@@ -265,14 +266,14 @@ $item-spacing: 1.5rem;
       
       .degreeYear {
         color: $light-gray;
-        font-family: $font-inter;
+        font-family: $font-body;
         font-size: 0.9rem;
         min-width: 45px;
       }
       
       p {
         color: $text-color;
-        font-family: $font-inter;
+        font-family: $font-body;
         font-size: $base-font-size;
         margin: 0;
       }

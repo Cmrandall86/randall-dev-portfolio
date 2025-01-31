@@ -55,13 +55,19 @@ $font-inter: var(--font-inter);
   }
 
   .Summary {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 3rem;
-    color: #2d3748;
-    font-family: $font-inter;
+    font-family: var(--font-poppins);
+    font-size: 1.8rem;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #4a5568;
     font-weight: 400;
     letter-spacing: 0.2px;
+    
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
+      padding: 0 1rem;
+    }
   }
 }
 
@@ -172,7 +178,7 @@ $font-inter: var(--font-inter);
   }
 
   .Summary {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     padding: 0;
   }
 }
