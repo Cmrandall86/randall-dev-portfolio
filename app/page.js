@@ -37,22 +37,82 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section>
+      <section className={styles.AboutSection}>
         <div className={styles.Content}>
           <div className={styles.AboutMe}>
             <div className={styles.PreTitle}>ABOUT ME</div>
             <div className={styles.Divider} />
+            
+            {/* Professional Summary */}
             <div className={styles.Summary}>
-              I am a full stack web developer based in Albuquerque, New Mexico with 2 years of professional experience.
+              Highly motivated Front-end Developer and Software Engineer with expertise in React, Next.js, 
+              and modern JavaScript frameworks. Experienced in creating intuitive user interfaces and 
+              integrating APIs. Passionate about learning new technologies and expanding my skillset 
+              to deliver impactful digital experiences.
             </div>
-            <div className={styles.Columns}>
-              <div className={styles.SummaryTitle}>I build web apps & software solutions.</div>
-              <div className={styles.Column}>
-                As a software engineer, I specialize in front-end web development using JavaScript and React. My passion
-                for learning and improving my skills drives me to continuously seek new challenges and opportunities to
-                grow. I am committed to bringing value to my team and contributing to the success of any project I work
-                on.
+
+            {/* Skills Grid */}
+            <div className={styles.SkillsGrid}>
+              <div className={styles.SkillCategory}>
+                <h3>Frontend</h3>
+                <ul>
+                  <li>React.js</li>
+                  <li>Next.js</li>
+                  <li>JavaScript (ES6+)</li>
+                  <li>HTML5 & CSS3</li>
+                  <li>SCSS/Sass</li>
+                  <li>Material UI</li>
+                  <li>Tailwind CSS</li>
+                </ul>
               </div>
+              
+              <div className={styles.SkillCategory}>
+                <h3>Backend</h3>
+                <ul>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                  <li>RESTful APIs</li>
+                  <li>MySQL</li>
+                  <li>Firebase</li>
+                  <li>GraphQL</li>
+                  <li>Database Design</li>
+                </ul>
+              </div>
+
+              <div className={styles.SkillCategory}>
+                <h3>Tools & Methods</h3>
+                <ul>
+                  <li>Git & GitHub</li>
+                  <li>Agile/Scrum</li>
+                  <li>Responsive Design</li>
+                  <li>AWS Lambda</li>
+                  <li>VS Code</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Professional Journey */}
+            <div className={styles.Journey}>
+              <h3>My Journey</h3>
+              <p>
+                Starting with a foundation in business management and transitioning to web development, 
+                I've grown into a versatile developer specializing in creating dynamic, responsive web 
+                applications. I excel at building robust CMS-type applications, collaborating with 
+                cross-functional teams, and implementing complex user interfaces. My experience includes 
+                developing scalable solutions for various clients, from e-commerce platforms to 
+                government agency applications. I'm committed to writing clean code, optimizing 
+                performance, and delivering exceptional user experiences.
+              </p>
+            </div>
+
+            {/* Call to Action */}
+            <div className={styles.CTASection}>
+              <Link href="/projects" className={styles.CTAButton}>
+                View My Projects
+              </Link>
+              <Link href="/resume" className={styles.CTAButton}>
+                See Full Resume
+              </Link>
             </div>
           </div>
         </div>

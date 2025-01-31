@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 
-import { Poppins, Playfair_Display, Barlow_Semi_Condensed } from "next/font/google";
+import { Poppins, Playfair_Display, Barlow_Semi_Condensed, Roboto, Inter } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -27,13 +27,25 @@ const barlow = Barlow_Semi_Condensed({
   variable: "--font-barlow",
 });
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+});
+
 export default function layout({ children }) {
   return (
     <html lang="en">
       <head></head>
       <body>
         <main
-          className={`${poppins.variable} ${playfair.variable} ${barlow.variable} flex `}
+          className={`${poppins.variable} ${playfair.variable} ${barlow.variable} ${roboto.variable} ${inter.variable} flex `}
         >
             <NavBar/>
             <div style={{ maxWidth: "1240px", margin: "0 auto"}} className={styles.MobileCentering}>{children}</div>

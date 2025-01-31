@@ -213,12 +213,12 @@ $color-light: #758398;
 }
 
 .Hero {
-  min-height: calc(100vh - 225px);
+  // min-height: calc(100vh - 225px);
   margin-top: 150px;
 
   @media (max-width: '768px') {
     margin-top: 50px;
-    min-height: calc(100vh - 125px);
+    // min-height: calc(100vh - 125px);
 
   }
 }

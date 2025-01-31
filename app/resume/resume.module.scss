@@ -1,0 +1,287 @@
+// Variables
+$primary-color: #2d3748;
+$accent-color: #0070f3;
+$text-color: #4a5568;
+$light-gray: #666;
+$background-white: #ffffff;
+$font-roboto: var(--font-roboto);
+$font-inter: var(--font-inter);
+$base-font-size: 0.95rem;
+$base-line-height: 1.6;
+$section-spacing: 2rem;
+$item-spacing: 1.5rem;
+
+.resumeContainer {
+  max-width: 900px;
+  margin: $section-spacing auto;
+  padding: 0 2rem;
+}
+
+.downloadSection {
+  text-align: right;
+  margin-bottom: $section-spacing;
+}
+
+.downloadButton {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: $accent-color;
+  color: $background-white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: $font-inter;
+  font-size: 0.9rem;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.resume {
+  background: $background-white;
+  padding: $section-spacing;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Header Styles
+.header {
+  text-align: center;
+  margin-bottom: $section-spacing * 1.5;
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: $item-spacing;
+    font-family: $font-roboto;
+    font-weight: 700;
+    color: $primary-color;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-family: $font-inter;
+  
+  a {
+    color: $accent-color;
+    text-decoration: none;
+    font-size: $base-font-size;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Section Styles
+.section {
+  margin-bottom: $section-spacing;
+  
+  h2 {
+    color: $primary-color;
+    font-family: $font-roboto;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid $accent-color;
+    padding-bottom: 0.5rem;
+    margin-bottom: $item-spacing;
+  }
+
+  p {
+    font-family: $font-inter;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-color;
+  }
+}
+
+// Job & Project Styles
+.job, .project {
+  margin-bottom: $section-spacing;
+}
+
+.jobHeader, .projectHeader {
+  margin-bottom: $item-spacing * 0.75;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  
+  h3 {
+    font-family: $font-roboto;
+    font-weight: 500;
+    color: $primary-color;
+    font-size: 1.1rem;
+  }
+}
+
+.jobMeta {
+  display: flex;
+  gap: 1.5rem;
+  color: $light-gray;
+  font-size: 0.9rem;
+  font-family: $font-inter;
+  
+  .position {
+    font-weight: 500;
+    color: $primary-color;
+  }
+  
+  .dates {
+    margin-left: auto;
+  }
+}
+
+.projectLink {
+  color: $accent-color;
+  text-decoration: none;
+  font-family: $font-inter;
+  font-size: $base-font-size;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.projectDate {
+  color: $light-gray;
+  font-family: $font-inter;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+// List Styles
+.bulletList {
+  list-style-type: none;
+  padding-left: 1.2rem;
+  margin-top: $item-spacing * 0.5;
+  font-family: $font-inter;
+  
+  li {
+    margin-bottom: $item-spacing * 0.5;
+    color: $text-color;
+    line-height: $base-line-height;
+    position: relative;
+    font-size: $base-font-size;
+    
+    &:before {
+      content: "•";
+      position: absolute;
+      left: -1.2rem;
+      color: $accent-color;
+    }
+    
+    .bulletList {
+      margin: ($item-spacing * 0.5) 0;
+      
+      li:before {
+        content: "○";
+      }
+    }
+  }
+}
+
+// Skills Grid
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $section-spacing;
+  
+  .skillCategory {
+    h4 {
+      color: $primary-color;
+      font-family: $font-roboto;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: $item-spacing * 0.5;
+    }
+    
+    p {
+      color: $text-color;
+      line-height: $base-line-height;
+      font-family: $font-inter;
+      font-size: $base-font-size;
+    }
+  }
+}
+
+// Education Section
+.education {
+  .educationItem {
+    margin-bottom: $item-spacing;
+    
+    h3 {
+      font-family: $font-roboto;
+      font-weight: 500;
+      color: $primary-color;
+      font-size: 1.1rem;
+      margin-bottom: $item-spacing * 0.3;
+    }
+    
+    p {
+      color: $text-color;
+      font-family: $font-inter;
+      font-size: $base-font-size;
+      margin-top: $item-spacing * 0.2;
+    }
+  }
+  
+  .educationMeta {
+    display: flex;
+    justify-content: space-between;
+    color: $light-gray;
+    font-size: 0.9rem;
+    font-family: $font-inter;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .resumeContainer {
+    padding: 0 1rem;
+    margin: ($section-spacing * 0.5) auto;
+  }
+  
+  .resume {
+    padding: $section-spacing ($section-spacing * 0.75);
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contactInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: $item-spacing * 0.3;
+  }
+  
+  .jobMeta {
+    flex-direction: column;
+    gap: $item-spacing * 0.3;
+    
+    .dates {
+      margin-left: 0;
+    }
+  }
+  
+  .section h2 {
+    font-size: 1.1rem;
+  }
+  
+  .projectHeader {
+    flex-direction: column;
+    gap: $item-spacing * 0.3;
+    
+    .projectDate {
+      margin-left: 0;
+    }
+  }
+} 
