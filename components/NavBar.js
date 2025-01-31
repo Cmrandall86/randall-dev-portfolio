@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./Logo";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
   const [toggleMobileNavLinks, setToggleMobileNavLinks] = useState(false);
+  const pathname = usePathname();
 
   const handleClickHamburger = () => {
     setToggleMobileNavLinks(!toggleMobileNavLinks);
@@ -26,77 +28,95 @@ export default function NavBar() {
     };
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setToggleMobileNavLinks(false);
+  }, [pathname]);
+
   return (
-    <header className="navWrapper">
-      <nav className="nav">
-        <div className="logo-wrapper">
+    <header className="nav-header">
+      <nav className="nav-container">
+        <div className="nav-logo">
           <Link href="/">
             <Logo />
           </Link>
         </div>
-        <div className="hamburger-wrapper">
+
         <button
-      className={`hamburger hamburger--3dx ${toggleMobileNavLinks ? 'is-active' : ''}`}
-      type="button"
-      aria-label="Menu"
-      aria-controls="navigation"
-      onClick={handleClickHamburger}
-    >
-      <span className="hamburger-box">
-        <span className="hamburger-inner"></span>
-      </span>
-    </button>
-        </div>
-        <ul className="desktop-nav-list">
+          className={`nav-toggle ${toggleMobileNavLinks ? 'active' : ''}`}
+          type="button"
+          aria-label="Toggle menu"
+          onClick={handleClickHamburger}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+
+        <ul className="nav-links desktop">
           <li>
-            <Link href="/" className="page-link" >
+            <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/resume" className="page-link">
+            <Link href="/resume" className={`nav-link ${pathname === '/resume' ? 'active' : ''}`}>
               Resume
             </Link>
           </li>
           <li>
-            <Link href="/projects" className="page-link">
+            <Link href="/projects" className={`nav-link ${pathname === '/projects' ? 'active' : ''}`}>
               Projects
             </Link>
           </li>
           <li>
-            <Link href="https://github.com/Cmrandall86" className="page-link">
+            <Link href="https://github.com/Cmrandall86" className="nav-link">
               Github
             </Link>
           </li>
         </ul>
       </nav>
 
-      <ul className="mobile-nav-list" style={{ display: toggleMobileNavLinks ? "block" : "none" }}>
-        <li>
-          <Link href="/" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link href="/resume" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
-            Resume
-          </Link>
-        </li>
-        <li>
-          <Link href="/projects" className="page-link" onClick={() => setToggleMobileNavLinks(false)}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://github.com/Cmrandall86"
-            onClick={() => setToggleMobileNavLinks(false)}
-            className="page-link"
-          >
-            Github
-          </Link>
-        </li>
-      </ul>
+      <div className={`mobile-menu ${toggleMobileNavLinks ? 'active' : ''}`}>
+        <ul className="nav-links mobile">
+          <li>
+            <Link 
+              href="/" 
+              className={`nav-link ${pathname === '/' ? 'active' : ''}`}
+              onClick={() => setToggleMobileNavLinks(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/resume" 
+              className={`nav-link ${pathname === '/resume' ? 'active' : ''}`}
+              onClick={() => setToggleMobileNavLinks(false)}
+            >
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/projects" 
+              className={`nav-link ${pathname === '/projects' ? 'active' : ''}`}
+              onClick={() => setToggleMobileNavLinks(false)}
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="https://github.com/Cmrandall86" 
+              className="nav-link"
+              onClick={() => setToggleMobileNavLinks(false)}
+            >
+              Github
+            </Link>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
