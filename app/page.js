@@ -148,7 +148,7 @@ export default function HomePage() {
           <div className={styles.Journey}>
             <h3>My Journey</h3>
             <p>
-              My path to web development wasn't traditional, but it was always driven by curiosity, creativity, and a love for problem-solving.
+              My path to web development wasn&apos;t traditional, but it was always driven by curiosity, creativity, and a love for problem-solving.
             </p>
             <p>
               I initially pursued business management, earning an associate degree and spending the next decade working in the restaurant industry. 
@@ -164,10 +164,10 @@ export default function HomePage() {
               At Ribbn, I worked remotely as a front-end developer, building a React and Next.js-powered e-commerce platform. The tech stack also included 
               TypeScript, Tailwind CSS, and Firebase, and I loved the challenge of creating scalable, reusable components while collaborating with a small, 
               fast-moving team. Unfortunately, as a small startup, Ribbn faced funding challenges and had to make difficult decisions. In early 2024, I moved 
-              on to Real Time Solutions, where I've worked on a range of projects, including government CMS applications and internal business tools.
+              on to Real Time Solutions, where I&apos;ve worked on a range of projects, including government CMS applications and internal business tools.
             </p>
             <p>
-              Now, I'm looking to return to remote work—not just for flexibility, but because I'm more productive, more focused, and ultimately a better 
+              Now, I&apos;m looking to return to remote work—not just for flexibility, but because I&apos;m more productive, more focused, and ultimately a better 
               developer in my home setup. Working remotely also allows me to be more present for my family while continuing to grow as a developer and 
               contribute meaningfully to impactful projects.
             </p>
