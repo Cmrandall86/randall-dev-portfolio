@@ -68,13 +68,13 @@ export default function HomePage() {
             {activeTab === 'professional' ? (
               <div className={styles.Summary}>
                 <p>
-                I'm a front-end developer with a strong foundation in React, Next.js, and modern JavaScript frameworks, focused on building responsive, user-friendly web applications. With a background in business management and a passion for technology, I bring a problem-solving mindset to every project, ensuring that the applications I build are not only functional but also intuitive and scalable.
+                I&apos;m a front-end developer with a strong foundation in React, Next.js, and modern JavaScript frameworks, focused on building responsive, user-friendly web applications. With a background in business management and a passion for technology, I bring a problem-solving mindset to every project, ensuring that the applications I build are not only functional but also intuitive and scalable.
                 </p>
                 <p>
-                My experience includes developing CMS platforms, internal CRM tools, and data-driven applications for both private clients and government agencies. I've worked on e-commerce platforms, public data search tools, and embeddable UI components, always prioritizing clean code, performance optimization, and seamless user experiences.e.
+                My experience includes developing CMS platforms, internal CRM tools, and data-driven applications for both private clients and government agencies. I&apos;ve worked on e-commerce platforms, public data search tools, and embeddable UI components, always prioritizing clean code, performance optimization, and seamless user experiences.e.
                 </p>
                 <p>
-                I thrive in collaborative environments, working closely with designers, product managers, and backend engineers to bring ideas to life. I'm always eager to learn new technologies and refine my skills, whether it's enhancing UI/UX, improving accessibility, or integrating complex APIs.
+                I thrive in collaborative environments, working closely with designers, product managers, and backend engineers to bring ideas to life. I&apos;m always eager to learn new technologies and refine my skills, whether it&apos;s enhancing UI/UX, improving accessibility, or integrating complex APIs.
                 </p>
 
                 <div className={styles.summaryLinks}>
@@ -86,17 +86,17 @@ export default function HomePage() {
             ) : (
               <div className={styles.Summary}>
                 <p>
-                  I'm a husband and father of two daughters, living in Albuquerque, NM. When I'm not working 
+                  I&apos;m a husband and father of two daughters, living in Albuquerque, NM. When I&apos;m not working 
                   on programming projects, I enjoy spending time outdoors, hanging out with my dog, and catching 
                   up with friends on Discord while gaming. I like learning new things and optimizing different 
-                  aspects of life, whether it's health, productivity, or programming.
+                  aspects of life, whether it&apos;s health, productivity, or programming.
                 </p>
                 <p>
-                  I've always been interested in maker culture, including woodworking, 3D printing, and DIY 
-                  electronics with Arduino and Raspberry Pi, and I'd love to dive deeper into those hobbies. 
+                  I&apos;ve always been interested in maker culture, including woodworking, 3D printing, and DIY 
+                  electronics with Arduino and Raspberry Pi, and I&apos;d love to dive deeper into those hobbies. 
                   I also enjoy snowboarding, drumming, and exploring music, graffiti art, and calligraphy, 
-                  and I'd like to make more time for them in the future. Most of all, I like getting things 
-                  done, whether that's tackling a project in my garage or finding better ways to improve my workflow.
+                  and I&apos;d like to make more time for them in the future. Most of all, I like getting things 
+                  done, whether that&apos;s tackling a project in my garage or finding better ways to improve my workflow.
                 </p>
               </div>
             )}
