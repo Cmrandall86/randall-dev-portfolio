@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {  // Renamed from layout to Ro
             <div style={{ maxWidth: "1240px", margin: "0 auto"}} className={styles.MobileCentering}>
               {children}
             </div>
-            {/* <Footer/> */}
+            <Footer/>
         </main>
       </body>
     </html>

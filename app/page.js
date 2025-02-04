@@ -6,8 +6,11 @@ import ResponsiveImage from "@components/Image";
 import LinkedIn_icon from "public/LinkedIn_icon";
 import Mail_icon from "public/Mail_icon";
 import Link from "next/link";
+import { useState } from 'react';
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState('professional');
+
   return (
     <div className={styles.HomePageWrapper}>
       <div className={styles.BackgroundGradient} />
@@ -39,15 +42,64 @@ export default function HomePage() {
       </section>
       <section className={styles.AboutSection}>
         <div className={styles.AboutMe}>
-          <div className={styles.PreTitle}>ABOUT ME</div>
-          <div className={styles.Divider} />
+          <div className={styles.headerSection}>
+            <div className={styles.leftSide}>
+              <div className={styles.PreTitle}>ABOUT ME</div>
+              <div className={styles.Divider} />
+            </div>
+            
+            <div className={styles.tabButtons}>
+              <button 
+                className={`${styles.tabButton} ${activeTab === 'professional' ? styles.active : ''}`}
+                onClick={() => setActiveTab('professional')}
+              >
+                Professional
+              </button>
+              <button 
+                className={`${styles.tabButton} ${activeTab === 'personal' ? styles.active : ''}`}
+                onClick={() => setActiveTab('personal')}
+              >
+                Personal
+              </button>
+            </div>
+          </div>
           
-          {/* Professional Summary */}
-          <div className={styles.Summary}>
-            Highly motivated Front-end Developer and Software Engineer with expertise in React, Next.js, 
-            and modern JavaScript frameworks. Experienced in creating intuitive user interfaces and 
-            integrating APIs. Passionate about learning new technologies and expanding my skillset 
-            to deliver impactful digital experiences.
+          <div className={styles.tabContent}>
+            {activeTab === 'professional' ? (
+              <div className={styles.Summary}>
+                <p>
+                I'm a front-end developer with a strong foundation in React, Next.js, and modern JavaScript frameworks, focused on building responsive, user-friendly web applications. With a background in business management and a passion for technology, I bring a problem-solving mindset to every project, ensuring that the applications I build are not only functional but also intuitive and scalable.
+                </p>
+                <p>
+                My experience includes developing CMS platforms, internal CRM tools, and data-driven applications for both private clients and government agencies. I've worked on e-commerce platforms, public data search tools, and embeddable UI components, always prioritizing clean code, performance optimization, and seamless user experiences.e.
+                </p>
+                <p>
+                I thrive in collaborative environments, working closely with designers, product managers, and backend engineers to bring ideas to life. I'm always eager to learn new technologies and refine my skills, whether it's enhancing UI/UX, improving accessibility, or integrating complex APIs.
+                </p>
+
+                <div className={styles.summaryLinks}>
+                  <Link href="/projects">View Projects</Link>
+                  <span>•</span>
+                  <Link href="/resume">Resume</Link>
+                </div>
+              </div>
+            ) : (
+              <div className={styles.Summary}>
+                <p>
+                  I'm a husband and father of two daughters, living in Albuquerque, NM. When I'm not working 
+                  on programming projects, I enjoy spending time outdoors, hanging out with my dog, and catching 
+                  up with friends on Discord while gaming. I like learning new things and optimizing different 
+                  aspects of life, whether it's health, productivity, or programming.
+                </p>
+                <p>
+                  I've always been interested in maker culture, including woodworking, 3D printing, and DIY 
+                  electronics with Arduino and Raspberry Pi, and I'd love to dive deeper into those hobbies. 
+                  I also enjoy snowboarding, drumming, and exploring music, graffiti art, and calligraphy, 
+                  and I'd like to make more time for them in the future. Most of all, I like getting things 
+                  done, whether that's tackling a project in my garage or finding better ways to improve my workflow.
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Skills Grid */}
@@ -58,10 +110,12 @@ export default function HomePage() {
                 <li>React.js</li>
                 <li>Next.js</li>
                 <li>JavaScript (ES6+)</li>
+                <li>jQuery</li>
                 <li>HTML5 & CSS3</li>
                 <li>SCSS/Sass</li>
                 <li>Material UI</li>
                 <li>Tailwind CSS</li>
+                <li>Bootstrap</li>
               </ul>
             </div>
             
@@ -74,7 +128,6 @@ export default function HomePage() {
                 <li>MySQL</li>
                 <li>Firebase</li>
                 <li>GraphQL</li>
-                <li>Database Design</li>
               </ul>
             </div>
 
@@ -82,10 +135,11 @@ export default function HomePage() {
               <h3>Tools & Methods</h3>
               <ul>
                 <li>Git & GitHub</li>
-                <li>Agile/Scrum</li>
-                <li>Responsive Design</li>
                 <li>AWS Lambda</li>
                 <li>VS Code</li>
+                <li>Styled Components</li>
+                <li>Agile/Scrum</li>
+                <li>Responsive Design</li>
               </ul>
             </div>
           </div>
@@ -94,13 +148,28 @@ export default function HomePage() {
           <div className={styles.Journey}>
             <h3>My Journey</h3>
             <p>
-              Starting with a foundation in business management and transitioning to web development, 
-              I&apos;ve grown into a versatile developer specializing in creating dynamic, responsive web 
-              applications. I excel at building robust CMS-type applications, collaborating with 
-              cross-functional teams, and implementing complex user interfaces. My experience includes 
-              developing scalable solutions for various clients, from e-commerce platforms to 
-              government agency applications. I&apos;m committed to writing clean code, optimizing 
-              performance, and delivering exceptional user experiences.
+              My path to web development wasn't traditional, but it was always driven by curiosity, creativity, and a love for problem-solving.
+            </p>
+            <p>
+              I initially pursued business management, earning an associate degree and spending the next decade working in the restaurant industry. 
+              I wore just about every hat—trainer, headwaiter, bartender, and beyond—learning firsthand how to adapt, lead, and solve problems under pressure. 
+              But while I enjoyed the fast-paced environment, I knew I wanted to build something.
+            </p>
+            <p>
+              I started exploring design and digital tools, taking courses in Photoshop, Illustrator, and graphic design. That creative itch eventually 
+              led me to web development, where I found the perfect blend of logic and creativity. In 2019, I went back to school to earn a certificate 
+              in web programming, and soon after graduating, I joined <Link href="https://myribbn.com" target="_blank" className={styles.journeyLink}>Ribbn</Link>.
+            </p>
+            <p>
+              At Ribbn, I worked remotely as a front-end developer, building a React and Next.js-powered e-commerce platform. The tech stack also included 
+              TypeScript, Tailwind CSS, and Firebase, and I loved the challenge of creating scalable, reusable components while collaborating with a small, 
+              fast-moving team. Unfortunately, as a small startup, Ribbn faced funding challenges and had to make difficult decisions. In early 2024, I moved 
+              on to Real Time Solutions, where I've worked on a range of projects, including government CMS applications and internal business tools.
+            </p>
+            <p>
+              Now, I'm looking to return to remote work—not just for flexibility, but because I'm more productive, more focused, and ultimately a better 
+              developer in my home setup. Working remotely also allows me to be more present for my family while continuing to grow as a developer and 
+              contribute meaningfully to impactful projects.
             </p>
           </div>
 
