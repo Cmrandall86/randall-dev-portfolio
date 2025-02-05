@@ -68,13 +68,14 @@ export default function HomePage() {
             {activeTab === 'professional' ? (
               <div className={styles.Summary}>
                 <p>
-                I&apos;m a front-end developer with a strong foundation in React, Next.js, and modern JavaScript frameworks, focused on building responsive, user-friendly web applications. With a background in business management and a passion for technology, I bring a problem-solving mindset to every project, ensuring that the applications I build are not only functional but also intuitive and scalable.
+                  I&apos;m a front-end developer with a strong foundation in React, Next.js, and modern JavaScript frameworks, focused on building responsive, user-friendly web applications. I started my career on a business and hospitality trajectory but gradually realized my passion for technology, leading me to pivot into programming. That experience taught me how to communicate effectively, adapt to new challenges, and work effectively within a team—fostering strong collaboration and a positive, open communication style.
+                </p>
+
+                <p>
+                  My experience includes developing CMS platforms, internal CRM tools, and data-driven applications for both private clients and government agencies. I&apos;ve worked on e-commerce platforms, public data search tools, and embeddable UI components, always prioritizing clean code, performance optimization, and seamless user experiences.
                 </p>
                 <p>
-                My experience includes developing CMS platforms, internal CRM tools, and data-driven applications for both private clients and government agencies. I&apos;ve worked on e-commerce platforms, public data search tools, and embeddable UI components, always prioritizing clean code, performance optimization, and seamless user experiences.e.
-                </p>
-                <p>
-                I thrive in collaborative environments, working closely with designers, product managers, and backend engineers to bring ideas to life. I&apos;m always eager to learn new technologies and refine my skills, whether it&apos;s enhancing UI/UX, improving accessibility, or integrating complex APIs.
+                  I thrive in collaborative environments, working closely with designers, product managers, and backend engineers to bring ideas to life. I&apos;m always eager to learn new technologies and refine my skills, whether it&apos;s enhancing UI/UX, improving accessibility, or integrating complex APIs.
                 </p>
 
                 <div className={styles.summaryLinks}>
