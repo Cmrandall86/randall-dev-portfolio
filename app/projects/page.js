@@ -21,14 +21,27 @@ export default function ProjectsPage() {
             <div className="project-text">
               <h2>Found This</h2>
               <p className="project-description">
-                A curated collection platform showcasing unique finds with a clean, modern interface.
-                Features dynamic sorting, filtering, and responsive design for optimal user experience.
+                A modern product discovery platform that enables users to curate and share interesting finds. 
+                Built with Next.js 15 and React 18, the platform features a responsive design with glass-morphism UI elements, 
+                real-time filtering, and dynamic image handling. The application integrates Sanity.io as a headless CMS 
+                and implements optimistic UI updates for a seamless user experience.
               </p>
+              <div className="tech-stack">
+                <h4>Key Features</h4>
+                <ul>
+                  <li>Dynamic Product Grid</li>
+                  <li>Real-time Search</li>
+                  <li>Tag-based Filtering</li>
+                  <li>Dark Mode Support</li>
+                  <li>URL Image Preview</li>
+                </ul>
+              </div>
               <div className="tech-stack">
                 <h4>Technologies Used</h4>
                 <ul>
-                  <li>React</li>
-                  <li>Next.js</li>
+                  <li>Next.js 15</li>
+                  <li>React 18</li>
+                  <li>Sanity.io</li>
                   <li>SCSS</li>
                   <li>Material UI</li>
                 </ul>

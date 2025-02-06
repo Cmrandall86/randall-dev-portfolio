@@ -73,6 +73,24 @@ $transition-speed: 0.3s;
     h2 {
       font-size: 1.8rem;
     }
+    
+    .tech-stack {
+      margin: 1rem 0;
+      
+      &:last-of-type {
+        margin-bottom: 1.5rem;
+      }
+      
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        
+        li {
+          max-width: 200px;
+        }
+      }
+    }
   }
 }
 
