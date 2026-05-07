@@ -73,7 +73,7 @@ export default function Resume() {
               <li>Lead frontend architecture and application development across enterprise and public-facing platforms, owning UI systems, service integrations, SQL workflows, and technical implementation decisions.</li>
               <li>Rebuilt a legacy C# platform into a modern JavaScript-based enterprise application for the Navajo Nation, supporting 313 users across 110 chapters and 5 agencies.</li>
               <li>Designed and implemented core platform capabilities including RBAC, cross-application integrations, reporting systems, backend API workflows, and SQL data access spanning six relational databases.</li>
-              <li>Led frontend architecture for a large-scale Retail Licensing &amp; Distribution platform, partnering daily with stakeholders to rapidly iterate on production-ready operational workflows.</li>
+              <li>Led frontend architecture for a large-scale Regulation &amp; Licensing Department platform, partnering daily with stakeholders to rapidly iterate on production-ready operational workflows.</li>
               <li>Independently developed a public-facing records search and administrative platform for Otero County, integrating enterprise authentication infrastructure, search workflows, permissions management, and CMS-style administrative tooling.</li>
               <li>Partner directly with stakeholders on product discovery, requirements gathering, and iterative workflow design to rapidly deliver business-critical software improvements.</li>
               <li>Deploy frontend applications to AWS S3 and participate in AWS Lambda release pipelines supporting continuous delivery across multiple production systems.</li>
