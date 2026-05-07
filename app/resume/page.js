@@ -7,9 +7,9 @@ export default function Resume() {
   return (
     <div className={styles.page}>
       <main className={styles.resume}>
-        <a href="/Chris_Randall_Resume.pdf" download className={styles.downloadBtn}>
+        <button onClick={() => window.print()} className={styles.downloadBtn}>
           Download PDF
-        </a>
+        </button>
         {/* ── HEADER ── */}
         <header className={styles.header}>
           <div className={styles.nameBlock}>
