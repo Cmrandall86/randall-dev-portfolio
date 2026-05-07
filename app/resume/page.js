@@ -75,6 +75,8 @@ export default function Resume() {
               <li>Designed and implemented core platform capabilities including RBAC, cross-application integrations, reporting systems, backend API workflows, and SQL data access spanning six relational databases.</li>
               <li>Led frontend architecture for a large-scale Retail Licensing &amp; Distribution platform, partnering daily with stakeholders to rapidly iterate on production-ready operational workflows.</li>
               <li>Independently developed a public-facing records search and administrative platform for Otero County, integrating enterprise authentication infrastructure, search workflows, permissions management, and CMS-style administrative tooling.</li>
+              <li>Partner directly with stakeholders in ongoing product discovery, requirements gathering, and iterative workflow design to rapidly deliver business-critical software improvements.</li>
+              <li>Deploy frontend applications to AWS S3 and participate in backend release deployments through AWS Lambda pipelines, supporting continuous delivery across multiple production systems.</li>
             </ul>
           </div>
 
@@ -116,6 +118,12 @@ export default function Resume() {
               <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor, AI-Assisted Engineering Workflows</span>
             </div>
           </div>
+        </section>
+
+        {/* ── CORE STRENGTHS ── */}
+        <section className={styles.section}>
+          <h2>Core Strengths</h2>
+          <p>Frontend Architecture · Product-Focused UI Development · API Integration · SQL Workflows · Stakeholder Collaboration · AI-Assisted Engineering Workflows</p>
         </section>
 
       </main>
