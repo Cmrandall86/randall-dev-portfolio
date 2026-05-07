@@ -1,367 +1,392 @@
-// Variables
-$primary-color: #2d3748;
-$accent-color: #0070f3;
-$text-color: #4a5568;
-$light-gray: #666;
-$background-white: #ffffff;
-$font-heading: var(--font-poppins);
-$font-body: var(--font-barlow);
-$base-font-size: 0.875rem;
-$base-line-height: 1.6;
-$section-spacing: 2rem;
-$item-spacing: 1.5rem;
+// ── Tokens ─────────────────────────────────────────────────────────────────
+$navy:       #2b4c8c;   // muted navy accent
+$navy-light: #3d5fa0;
+$ink:        #1a2035;   // headings / company names
+$body:       #374151;   // body text
+$muted:      #6b7280;   // dates, location, labels
+$rule:       #e5e7eb;   // divider lines
+$white:      #ffffff;
+$paper:      #f9fafb;   // page background
 
-.resumeContainer {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0;
+$font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+// ── Page wrapper ────────────────────────────────────────────────────────────
+.page {
+  background: $paper;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 1.5rem 3rem;
+  font-family: $font;
 }
 
-.downloadSection {
-  text-align: right;
-  margin: $section-spacing 0;
-  width: 100%;
-  padding: 0 2rem;
-}
-
-.downloadButton {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: $accent-color;
-  color: $background-white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-family: $font-body;
-  font-size: 0.9rem;
-  
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-}
-
+// ── Resume card ─────────────────────────────────────────────────────────────
 .resume {
-  background: $background-white;
-  padding: $section-spacing ($section-spacing * 1.5);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 4rem);
-  max-width: 1100px;
+  position: relative;
+  background: $white;
+  width: 100%;
+  max-width: 780px;
+  padding: 2.75rem 2.75rem 2.5rem;
+  border: 1px solid $rule;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-// Header Styles
-.header {
-  text-align: center;
-  margin-bottom: $section-spacing * 1.5;
-  
-  h1 {
-    font-family: $font-heading;
-    font-size: 2.2rem;
-    margin-bottom: $item-spacing;
-    font-weight: 600;
-    color: $primary-color;
-  }
-}
-
-.contactInfo {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  font-family: $font-body;
-  
-  a {
-    color: $accent-color;
-    text-decoration: none;
-    font-size: $base-font-size;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  
-  .divider {
-    color: $light-gray;
-  }
-}
-
-// Section Styles
-.section {
-  margin-bottom: $section-spacing;
-  
-  h2 {
-    font-family: $font-heading;
-    color: $primary-color;
-    font-weight: 500;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid $accent-color;
-    padding-bottom: 0.5rem;
-    margin-bottom: $item-spacing;
-  }
-
-  p {
-    font-family: $font-body;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color: $text-color;
-    font-weight: 400;
-  }
-}
-
-// Job & Project Styles
-.job, .project {
-  margin-bottom: $section-spacing;
-}
-
-.jobHeader, .projectHeader {
-  margin-bottom: $item-spacing * 0.75;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  
-  h3 {
-    font-family: $font-heading;
-    font-weight: 500;
-    color: $primary-color;
-    font-size: 1.1rem;
-  }
-}
-
-.jobMeta {
-  display: flex;
-  gap: 1.5rem;
-  color: $light-gray;
-  font-size: 0.9rem;
-  font-family: $font-body;
-  
-  .position {
-    font-weight: 500;
-    color: $primary-color;
-  }
-  
-  .dates {
-    margin-left: auto;
-  }
-}
-
-.projectLink {
-  color: $accent-color;
+// ── Download button (floats inside top-right of card) ───────────────────────
+.downloadBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  padding: 0.38rem 0.9rem;
+  border: 1.5px solid $rule;
+  border-radius: 5px;
+  color: $muted;
+  background: $white;
+  font-family: $font;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-decoration: none;
-  font-family: $font-body;
-  font-size: $base-font-size;
-  
+  transition: border-color 0.18s ease, color 0.18s ease;
+
+  &:hover {
+    border-color: $navy;
+    color: $navy;
+  }
+}
+
+// ── Header ──────────────────────────────────────────────────────────────────
+.header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid $rule;
+}
+
+.nameBlock {
+  margin-bottom: 0.6rem;
+
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: $ink;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.2rem;
+    line-height: 1.2;
+  }
+}
+
+.title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: $navy;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0;
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+  color: $muted;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: $muted;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    color: $muted;
+  }
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: $navy;
+  text-decoration: none;
+  font-weight: 500;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
   &:hover {
     text-decoration: underline;
+    color: $navy-light;
   }
 }
 
-.projectDate {
-  color: $light-gray;
-  font-family: $font-body;
+.sep {
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background: $rule;
+  margin: 0 0.6rem;
+  vertical-align: middle;
+}
+
+// ── Sections ─────────────────────────────────────────────────────────────────
+.section {
+  margin-bottom: 1.35rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $muted;
+    margin: 0 0 0.65rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $rule;
+  }
+
+  > p {
+    font-size: 0.855rem;
+    line-height: 1.65;
+    color: $body;
+    margin: 0;
+  }
+}
+
+// ── Experience / Education entry ─────────────────────────────────────────────
+.entry {
+  margin-bottom: 1.05rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.entryLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.entryRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  flex-shrink: 0;
+}
+
+.company {
   font-size: 0.9rem;
-  margin-left: auto;
+  font-weight: 650;
+  color: $ink;
+  letter-spacing: -0.01em;
 }
 
-// List Styles
-.bulletList {
-  list-style-type: none;
-  padding-left: 1.2rem;
-  margin-top: $item-spacing * 0.5;
-  font-family: $font-body;
-  
+.role {
+  font-size: 0.82rem;
+  color: $navy;
+  font-weight: 500;
+}
+
+.dates {
+  font-size: 0.78rem;
+  color: $muted;
+  white-space: nowrap;
+}
+
+.location {
+  font-size: 0.78rem;
+  color: $muted;
+  white-space: nowrap;
+}
+
+// ── Bullet list ──────────────────────────────────────────────────────────────
+.list {
+  margin: 0;
+  padding-left: 1.05rem;
+  list-style: none;
+
   li {
-    margin-bottom: $item-spacing * 0.5;
-    color: $text-color;
-    line-height: $base-line-height;
     position: relative;
-    font-size: $base-font-size;
-    
-    &:before {
-      content: "•";
+    font-size: 0.835rem;
+    line-height: 1.6;
+    color: $body;
+    margin-bottom: 0.28rem;
+    padding-left: 0.1rem;
+
+    &::before {
+      content: "–";
       position: absolute;
-      left: -1.2rem;
-      color: $accent-color;
+      left: -0.95rem;
+      color: $navy;
+      font-weight: 600;
     }
-    
-    .bulletList {
-      margin: ($item-spacing * 0.5) 0;
-      
-      li:before {
-        content: "○";
-      }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: $ink;
+      font-weight: 600;
     }
   }
 }
 
-// Skills Grid
-.skillsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: $section-spacing;
-  
-  .skillCategory {
-    h4 {
-      font-family: $font-heading;
-      color: $primary-color;
-      font-weight: 500;
-      font-size: 1rem;
-      margin-bottom: $item-spacing * 0.5;
-    }
-    
-    p {
-      font-family: $font-body;
-      color: $text-color;
-      line-height: $base-line-height;
-      font-size: $base-font-size;
-    }
-  }
+.yearTag {
+  font-size: 0.78rem;
+  color: $muted;
 }
 
-// Education Section
-.education {
-  .educationItem {
-    margin-bottom: $item-spacing;
-    
-    h3 {
-      font-family: $font-heading;
-      font-weight: 500;
-      color: $primary-color;
-      font-size: 1.1rem;
-      margin-bottom: $item-spacing * 0.3;
-    }
-    
-    p {
-      font-family: $font-body;
-      color: $text-color;
-      font-size: $base-font-size;
-      margin-top: $item-spacing * 0.2;
-    }
-  }
-  
-  .educationMeta {
-    display: flex;
-    justify-content: space-between;
-    color: $light-gray;
-    font-size: 0.9rem;
-    font-family: $font-body;
-    margin-bottom: $item-spacing * 0.5;
-  }
-
-  .degrees {
-    .degree {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: $item-spacing * 0.5;
-      
-      &:last-child {
-        margin-bottom: 0;
-      }
-      
-      .degreeYear {
-        color: $light-gray;
-        font-family: $font-body;
-        font-size: 0.9rem;
-        min-width: 45px;
-      }
-      
-      p {
-        color: $text-color;
-        font-family: $font-body;
-        font-size: $base-font-size;
-        margin: 0;
-      }
-    }
-  }
+// ── Skills table ─────────────────────────────────────────────────────────────
+.skillsTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
-// Responsive Design
-@media (max-width: 768px) {
-  .resumeContainer {
-    margin: 0 auto;
-    padding: 0 1.2rem 0 0.8rem;
+.skillRow {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.835rem;
+  line-height: 1.55;
+}
+
+.skillLabel {
+  flex-shrink: 0;
+  width: 11rem;
+  font-weight: 600;
+  color: $ink;
+  font-size: 0.8rem;
+}
+
+.skillValue {
+  color: $body;
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 640px) {
+  .page {
+    padding: 1.5rem 0.75rem 2rem;
   }
-  
+
   .resume {
-    padding: $section-spacing 1.25rem;
-    width: calc(100% - 2rem);
-    margin: 0 auto;
+    padding: 1.75rem 1.25rem;
   }
-  
-  .header h1 {
-    font-size: 1.8rem;
+
+  .nameBlock h1 {
+    font-size: 1.5rem;
   }
-  
-  .contactInfo {
+
+  .entryHeader {
     flex-direction: column;
-    align-items: center;
-    gap: $item-spacing * 0.4;
-    
-    .divider {
+    gap: 0.2rem;
+  }
+
+  .entryRight {
+    align-items: flex-start;
+  }
+
+  .skillRow {
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .skillLabel {
+    width: auto;
+  }
+
+  .sep {
+    display: none;
+  }
+
+  .contactRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+
+// ── Print stylesheet ──────────────────────────────────────────────────────────
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.55in 0.6in;
+  }
+
+  .page {
+    background: transparent;
+    padding: 0;
+    min-height: unset;
+  }
+
+  .downloadBtn {
+    display: none;
+  }
+
+  .resume {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .header {
+    padding-bottom: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    margin-bottom: 1rem;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .entry {
+    margin-bottom: 0.8rem;
+  }
+
+  .list li {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .contactLink,
+  .contactItem {
+    color: $ink !important;
+
+    svg {
       display: none;
     }
-    
-    a {
-      padding: 0.3rem 0;
-    }
-  }
-  
-  .jobMeta {
-    flex-direction: column;
-    gap: $item-spacing * 0.3;
-    
-    .dates {
-      margin-left: 0;
-    }
-  }
-  
-  .section h2 {
-    font-size: 1.1rem;
-  }
-  
-  .projectHeader {
-    flex-direction: column;
-    gap: $item-spacing * 0.3;
-    
-    .projectDate {
-      margin-left: 0;
-    }
   }
 
-  .skillsGrid {
-    gap: $item-spacing * 0.5;
-    grid-template-columns: 1fr;
-    
-    .skillCategory {
-      margin-bottom: $item-spacing * 0.3;
-      
-      h4 {
-        margin-bottom: $item-spacing * 0.15;
-      }
-    }
+  .sep {
+    background: #ccc;
   }
 
-  .downloadSection {
-    padding: 0;
-    margin: ($section-spacing * 0.75) 0;
-  }
-
-  .education {
-    .degrees {
-      .degree {
-        flex-direction: column;
-        gap: 0.3rem;
-        
-        .degreeYear {
-          color: $light-gray;
-        }
-      }
-    }
-  }
-} 
+}

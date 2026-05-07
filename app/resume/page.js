@@ -2,155 +2,140 @@
 
 import React from "react";
 import styles from "./resume.module.scss";
-import Link from "next/link";
 
 export default function Resume() {
   return (
-    <div className={styles.resumeContainer}>
-      <div className={styles.downloadSection}>
-        <a 
-          href="/Chris_Randall_Resume.pdf" 
-          download
-          className={styles.downloadButton}
-        >
-          Download PDF Resume
+    <div className={styles.page}>
+      <main className={styles.resume}>
+        <a href="/Chris_Randall_Resume.pdf" download className={styles.downloadBtn}>
+          Download PDF
         </a>
-      </div>
-
-      <div className={styles.resume}>
+        {/* ── HEADER ── */}
         <header className={styles.header}>
-          <h1>Christopher Randall</h1>
-          <div className={styles.contactInfo}>
-            <a href="mailto:cmrandall86@gmail.com">cmrandall86@gmail.com</a>
-            <span className={styles.divider}>|</span>
-            <a href="https://www.chrisrandall.dev">www.chrisrandall.dev</a>
-            <span className={styles.divider}>|</span>
-            <a href="https://www.linkedin.com/in/chris-randall-dev/">linkedin.com/in/chris-randall-dev</a>
+          <div className={styles.nameBlock}>
+            <h1>Christopher Randall</h1>
+            <p className={styles.title}>Software Developer&nbsp;&nbsp;|&nbsp;&nbsp;Frontend Engineer</p>
+          </div>
+          <div className={styles.contactRow}>
+            <span className={styles.contactItem}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Albuquerque, NM&ensp;·&ensp;Open to Remote
+            </span>
+            <span className={styles.sep} />
+            <a href="mailto:cmrandall86@gmail.com" className={styles.contactLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              cmrandall86@gmail.com
+            </a>
+            <span className={styles.sep} />
+            <a href="https://www.chrisrandall.dev" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Portfolio
+            </a>
+            <span className={styles.sep} />
+            <a href="https://www.linkedin.com/in/chris-randall-dev/" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <span className={styles.sep} />
+            <a href="https://github.com/crandall-dev" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
           </div>
         </header>
 
+        {/* ── PROFESSIONAL SUMMARY ── */}
         <section className={styles.section}>
-          <h2>PROFESSIONAL SUMMARY</h2>
+          <h2>Professional Summary</h2>
           <p>
-            Highly motivated Front-end Developer and Software Engineer with expertise in React, Next.js, and modern JavaScript
-            frameworks. Adept at building dynamic, responsive web applications and collaborating with cross-functional teams. Experienced
-            in creating intuitive user interfaces and integrating APIs. Passionate about learning new technologies and expanding my skillset
-            to continually grow in my professional life. Committed to solving complex problems and delivering impactful digital experiences.
+            Software Developer building enterprise-scale and public-facing web applications with JavaScript, React,
+            Node.js, Express, MySQL, and AWS. Strong in frontend architecture, API integrations, SQL workflows, and
+            stakeholder collaboration, with a track record of delivering polished, scalable software products.
           </p>
         </section>
 
+        {/* ── PROFESSIONAL EXPERIENCE ── */}
         <section className={styles.section}>
-          <h2>PROFESSIONAL EXPERIENCE</h2>
-          
-          <div className={styles.job}>
-            <div className={styles.jobHeader}>
-              <h3>Real Time Solutions</h3>
-              <div className={styles.jobMeta}>
-                <span className={styles.position}>Front-end Developer</span>
+          <h2>Professional Experience</h2>
+
+          <div className={styles.entry}>
+            <div className={styles.entryHeader}>
+              <div className={styles.entryLeft}>
+                <span className={styles.company}>Real Time Solutions</span>
+                <span className={styles.role}>Software Developer</span>
+              </div>
+              <div className={styles.entryRight}>
+                <span className={styles.dates}>February 2024 – Present</span>
                 <span className={styles.location}>Albuquerque, NM</span>
-                <span className={styles.dates}>Feb 2024 - Present</span>
               </div>
             </div>
-            <ul className={styles.bulletList}>
-              <li>Developed a robust CMS-type application for Otero County, enabling the public to search decedents and access relevant information. The app features authentication with role-based user permissions and integrates jQuery, MySQL, Node.js, Express, and Kendo UI, hosted via AWS Lambda.</li>
-              <li>Collaborated as a core team member on an internal company CRM, contributing as a front-end developer to design and build the UI for key functionalities:
-                <ul className={styles.bulletList}>
-                  <li>Generating quotes and managing communications (email/text) for sales team members.</li>
-                  <li>Developing an embeddable form widget for capturing customer interest in external applications.</li>
-                  <li>Tracking leads and prospects to streamline customer acquisition processes.</li>
-                </ul>
-              </li>
+            <ul className={styles.list}>
+              <li>Lead frontend architecture and application development across enterprise and public-facing platforms, owning UI systems, service integrations, SQL workflows, and technical implementation decisions.</li>
+              <li>Rebuilt a legacy C# platform into the modern Navajo Nation WIND application, a JavaScript-based enterprise system supporting 313 users across 110 chapters and 5 agencies.</li>
+              <li>Designed and implemented core platform capabilities including RBAC, cross-application integrations, reporting systems, backend API workflows, and SQL data access spanning six relational databases.</li>
+              <li>Led frontend architecture for a large-scale Retail Licensing &amp; Distribution platform, partnering daily with stakeholders to rapidly iterate on production-ready operational workflows.</li>
+              <li>Independently developed a public-facing records search and administrative platform for Otero County, integrating enterprise authentication infrastructure, search workflows, permissions management, and CMS-style administrative tooling.</li>
             </ul>
           </div>
 
-          <div className={styles.job}>
-            <div className={styles.jobHeader}>
-              <h3>Ribbn</h3>
-              <div className={styles.jobMeta}>
-                <span className={styles.position}>Software Developer</span>
+          <div className={styles.entry}>
+            <div className={styles.entryHeader}>
+              <div className={styles.entryLeft}>
+                <span className={styles.company}>Ribbn Inc.</span>
+                <span className={styles.role}>Software Developer</span>
+              </div>
+              <div className={styles.entryRight}>
+                <span className={styles.dates}>May 2022 – February 2024</span>
                 <span className={styles.location}>Remote</span>
-                <span className={styles.dates}>May 2022 - February 2024</span>
               </div>
             </div>
-            <ul className={styles.bulletList}>
-              <li>Contributed as part of a small team to develop a responsive e-commerce platform powered by React and Next.js. Primarily focused on creating reusable components, ensuring responsiveness across all screen sizes, and applying modern UI principles.</li>
-              <li>Collaborated with cross-functional teams to enhance user experience and optimize performance, delivering scalable solutions for various clients.</li>
+            <ul className={styles.list}>
+              <li>Built reusable React and Next.js components and implemented client-facing product features within a production e-commerce platform.</li>
+              <li>Collaborated with cross-functional teams to enhance user experience and optimize performance, delivering scalable solutions for multiple clients.</li>
             </ul>
           </div>
         </section>
 
+        {/* ── TECHNICAL SKILLS ── */}
         <section className={styles.section}>
-          <h2>NOTABLE PROJECTS</h2>
-          
-          <div className={styles.project}>
-            <div className={styles.projectHeader}>
-              <h3>N.B.A. Scores Application</h3>
-              <a href="https://crandall-nba-scores.netlify.app/" className={styles.projectLink}>crandall-nba-scores.netlify.app</a>
-              <span className={styles.projectDate}>2023</span>
+          <h2>Technical Skills</h2>
+          <div className={styles.skillsTable}>
+            <div className={styles.skillRow}>
+              <span className={styles.skillLabel}>Languages</span>
+              <span className={styles.skillValue}>JavaScript (ES6+), HTML5, CSS3, SCSS, SQL</span>
             </div>
-            <ul className={styles.bulletList}>
-              <li>Built a React-based web application to fetch and display NBA game scores for a selected date, leveraging Material UI and React Router.</li>
-              <li>Developed a real-time, intuitive user interface featuring a custom date picker and categorized game statuses (e.g., upcoming, in-progress, final).</li>
-            </ul>
-          </div>
-
-          <div className={styles.project}>
-            <div className={styles.projectHeader}>
-              <h3>Navajo Nation Department of Transportation (NNDOT) Project Tracker</h3>
-              <span className={styles.projectDate}>2024</span>
+            <div className={styles.skillRow}>
+              <span className={styles.skillLabel}>Frameworks &amp; Libraries</span>
+              <span className={styles.skillValue}>React, Next.js, Node.js, Express, jQuery, Tailwind CSS, Bootstrap, Material UI, Kendo UI</span>
             </div>
-            <ul className={styles.bulletList}>
-              <li>Designed and developed the front-end of a project tracker application for the Navajo Nation Department of Transportation.</li>
-              <li>Collaborated directly with the NNDOT Division Director and his team through meetings to gather requirements and implement solutions tailored to their needs.</li>
-              <li>Delivered a fully functional, user-friendly interface that streamlined project tracking and reporting for the department.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section className={styles.section}>
-          <h2>TECHNICAL SKILLS</h2>
-          <div className={styles.skillsGrid}>
-            <div className={styles.skillCategory}>
-              <h4>Programming Languages:</h4>
-              <p>JavaScript (ES6+), HTML5, CSS3, SCSS, JSX</p>
+            <div className={styles.skillRow}>
+              <span className={styles.skillLabel}>Databases &amp; APIs</span>
+              <span className={styles.skillValue}>MySQL, REST APIs, GraphQL, Firebase</span>
             </div>
-            <div className={styles.skillCategory}>
-              <h4>Frameworks and Libraries:</h4>
-              <p>React, Next.js, jQuery, Express, Tailwind CSS, Bootstrap, Material UI</p>
-            </div>
-            <div className={styles.skillCategory}>
-              <h4>Databases:</h4>
-              <p>MySQL, Firebase, GraphQL</p>
-            </div>
-            <div className={styles.skillCategory}>
-              <h4>Tools & Platforms:</h4>
-              <p>Git, GitHub, AWS Lambda, VS Code, Styled Components, REST APIs</p>
+            <div className={styles.skillRow}>
+              <span className={styles.skillLabel}>Tools &amp; Platforms</span>
+              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor</span>
             </div>
           </div>
         </section>
 
+        {/* ── EDUCATION ── */}
         <section className={styles.section}>
-          <h2>EDUCATION</h2>
-          <div className={styles.education}>
-            <div className={styles.educationItem}>
-              <h3>Central New Mexico Community College</h3>
-              <div className={styles.educationMeta}>
-                <span>Albuquerque, NM</span>
-              </div>
-              <div className={styles.degrees}>
-                <div className={styles.degree}>
-                  <span className={styles.degreeYear}>2021</span>
-                  <p>Certificate in Computer Information Systems: Web Programming</p>
-                </div>
-                <div className={styles.degree}>
-                  <span className={styles.degreeYear}>2008</span>
-                  <p>Associate of Business Management</p>
-                </div>
-              </div>
+          <h2>Education</h2>
+          <div className={styles.entryHeader}>
+            <div className={styles.entryLeft}>
+              <span className={styles.company}>Central New Mexico Community College</span>
+            </div>
+            <div className={styles.entryRight}>
+              <span className={styles.location}>Albuquerque, NM</span>
             </div>
           </div>
+          <ul className={styles.list}>
+            <li><strong>Certificate</strong> — Computer Information Systems: Web Programming &ensp;<span className={styles.yearTag}>2021</span></li>
+            <li><strong>Associate of Applied Science</strong> — Business Management &ensp;<span className={styles.yearTag}>2008</span></li>
+          </ul>
         </section>
-      </div>
+      </main>
     </div>
   );
 }
