@@ -70,13 +70,12 @@ export default function Resume() {
               </div>
             </div>
             <ul className={styles.list}>
-              <li>Lead frontend architecture and application development across enterprise and public-facing platforms, owning UI systems, service integrations, SQL workflows, and technical implementation decisions.</li>
-              <li>Rebuilt a legacy C# platform into a modern JavaScript-based enterprise application for the Navajo Nation, supporting 313 users across 110 chapters and 5 agencies.</li>
-              <li>Designed and implemented core platform capabilities including RBAC, cross-application integrations, reporting systems, backend API workflows, and SQL data access spanning six relational databases.</li>
-              <li>Led frontend architecture for a large-scale Regulation &amp; Licensing Department platform, partnering daily with stakeholders to rapidly iterate on production-ready operational workflows.</li>
-              <li>Independently developed a public-facing records search and administrative platform for Otero County, integrating enterprise authentication infrastructure, search workflows, permissions management, and CMS-style administrative tooling.</li>
-              <li>Partner directly with stakeholders on product discovery, requirements gathering, and iterative workflow design to rapidly deliver business-critical software improvements.</li>
-              <li>Deploy frontend applications to AWS S3 and participate in AWS Lambda release pipelines supporting continuous delivery across multiple production systems.</li>
+              <li>Lead application development across enterprise and public-facing software platforms, working across frontend UI, backend services, relational SQL systems, AWS deployments, and AI-assisted engineering workflows.</li>
+              <li>Built the ALTSD CRM, a full-stack administrative platform for the New Mexico Aging &amp; Long-Term Services Department supporting user management, partner approval workflows, administrative CMS functionality, and public-facing event publishing integrations.</li>
+              <li>Rebuilt a legacy enterprise platform into the modern Navajo Nation WIND application, supporting 313 users across 110 chapters and 5 agencies with RBAC, cross-application integrations, reporting systems, and SQL data access spanning six relational databases.</li>
+              <li>Led frontend architecture for a large-scale operational platform for the Regulation &amp; Licensing Department, partnering closely with stakeholders on product discovery, requirements gathering, and iterative workflow design.</li>
+              <li>Independently developed a public-facing records search and administrative platform for Otero County, integrating enterprise authentication, search workflows, permissions management, and CMS-style administrative tooling.</li>
+              <li>Contributed frontend development to modernization efforts for the Office of the State Auditor, helping rebuild legacy C# applications into modern JavaScript-based interfaces and workflows.</li>
             </ul>
           </div>
 
