@@ -48,9 +48,7 @@ export default function Resume() {
         <section className={styles.section}>
           <h2>Professional Summary</h2>
           <p>
-            Software Developer building enterprise-scale and public-facing web applications with JavaScript, React,
-            Node.js, Express, MySQL, and AWS. Strong in frontend architecture, API integrations, SQL workflows, and
-            stakeholder collaboration, with a track record of delivering polished, scalable software products.
+            Software Developer building enterprise-scale and public-facing web applications with JavaScript, React, Node.js, Express, MySQL, and AWS. Experienced in frontend architecture, API integrations, relational SQL systems, cloud deployments, and close stakeholder collaboration, with a track record of delivering polished, scalable software products.
           </p>
         </section>
 
@@ -70,7 +68,7 @@ export default function Resume() {
               </div>
             </div>
             <ul className={styles.list}>
-              <li>Lead application development across enterprise and public-facing software platforms, working across frontend UI, backend services, relational SQL systems, AWS deployments, and AI-assisted engineering workflows.</li>
+              <li>Lead development of enterprise and public-facing software platforms, working across frontend UI, backend services, relational SQL systems, AWS deployments, and AI-assisted engineering workflows.</li>
               <li>Built the ALTSD CRM, a full-stack administrative platform for the New Mexico Aging &amp; Long-Term Services Department supporting user management, partner approval workflows, administrative CMS functionality, and public-facing event publishing integrations.</li>
               <li>Rebuilt a legacy enterprise platform into the modern Navajo Nation WIND application, supporting 313 users across 110 chapters and 5 agencies with RBAC, cross-application integrations, reporting systems, and SQL data access spanning six relational databases.</li>
               <li>Led frontend architecture for a large-scale operational platform for the Regulation &amp; Licensing Department, partnering closely with stakeholders on product discovery, requirements gathering, and iterative workflow design.</li>
@@ -91,7 +89,7 @@ export default function Resume() {
               </div>
             </div>
             <ul className={styles.list}>
-              <li>Built reusable React and Next.js components and implemented client-facing product features within a production e-commerce platform.</li>
+              <li>Built reusable React and Next.js components and delivered client-facing product features within a production e-commerce platform.</li>
             </ul>
           </div>
         </section>
