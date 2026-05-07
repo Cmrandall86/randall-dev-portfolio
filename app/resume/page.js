@@ -37,7 +37,7 @@ export default function Resume() {
               LinkedIn
             </a>
             <span className={styles.sep} />
-            <a href="https://github.com/crandall-dev" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+            <a href="https://github.com/Cmrandall86" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               GitHub
             </a>
@@ -71,7 +71,7 @@ export default function Resume() {
             </div>
             <ul className={styles.list}>
               <li>Lead frontend architecture and application development across enterprise and public-facing platforms, owning UI systems, service integrations, SQL workflows, and technical implementation decisions.</li>
-              <li>Rebuilt a legacy C# platform into the modern Navajo Nation WIND application, a JavaScript-based enterprise system supporting 313 users across 110 chapters and 5 agencies.</li>
+              <li>Rebuilt a legacy C# platform into a modern JavaScript-based enterprise application for the Navajo Nation, supporting 313 users across 110 chapters and 5 agencies.</li>
               <li>Designed and implemented core platform capabilities including RBAC, cross-application integrations, reporting systems, backend API workflows, and SQL data access spanning six relational databases.</li>
               <li>Led frontend architecture for a large-scale Retail Licensing &amp; Distribution platform, partnering daily with stakeholders to rapidly iterate on production-ready operational workflows.</li>
               <li>Independently developed a public-facing records search and administrative platform for Otero County, integrating enterprise authentication infrastructure, search workflows, permissions management, and CMS-style administrative tooling.</li>
@@ -91,7 +91,6 @@ export default function Resume() {
             </div>
             <ul className={styles.list}>
               <li>Built reusable React and Next.js components and implemented client-facing product features within a production e-commerce platform.</li>
-              <li>Collaborated with cross-functional teams to enhance user experience and optimize performance, delivering scalable solutions for multiple clients.</li>
             </ul>
           </div>
         </section>
@@ -114,27 +113,11 @@ export default function Resume() {
             </div>
             <div className={styles.skillRow}>
               <span className={styles.skillLabel}>Tools &amp; Platforms</span>
-              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor</span>
+              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor, AI-assisted engineering workflows</span>
             </div>
           </div>
         </section>
 
-        {/* ── EDUCATION ── */}
-        <section className={styles.section}>
-          <h2>Education</h2>
-          <div className={styles.entryHeader}>
-            <div className={styles.entryLeft}>
-              <span className={styles.company}>Central New Mexico Community College</span>
-            </div>
-            <div className={styles.entryRight}>
-              <span className={styles.location}>Albuquerque, NM</span>
-            </div>
-          </div>
-          <ul className={styles.list}>
-            <li><strong>Certificate</strong> — Computer Information Systems: Web Programming &ensp;<span className={styles.yearTag}>2021</span></li>
-            <li><strong>Associate of Applied Science</strong> — Business Management &ensp;<span className={styles.yearTag}>2008</span></li>
-          </ul>
-        </section>
       </main>
     </div>
   );
