@@ -17,3 +17,14 @@ figure {
 main {
     margin-top: 75px;
 }
+
+@media print {
+    .nav-header,
+    footer {
+        display: none !important;
+    }
+
+    main {
+        margin-top: 0 !important;
+    }
+}
