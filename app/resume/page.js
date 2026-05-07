@@ -113,7 +113,7 @@ export default function Resume() {
             </div>
             <div className={styles.skillRow}>
               <span className={styles.skillLabel}>Tools &amp; Platforms</span>
-              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor, AI-assisted engineering workflows</span>
+              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor, AI-Assisted Engineering Workflows</span>
             </div>
           </div>
         </section>
