@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import "styles/globals.scss";
 import "styles/_navbar.scss"
@@ -8,6 +6,33 @@ import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 
 import { Poppins, Playfair_Display, Barlow_Semi_Condensed, Roboto, Inter, Source_Serif_Pro } from "next/font/google";
+
+export const metadata = {
+  title: "Chris Randall | Software Developer | Frontend Engineer",
+  description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
+  metadataBase: new URL("https://www.chrisrandall.dev"),
+  openGraph: {
+    title: "Chris Randall | Software Developer | Frontend Engineer",
+    description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
+    url: "https://www.chrisrandall.dev",
+    siteName: "Chris Randall",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Chris Randall – Software Developer | Frontend Engineer",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Chris Randall | Software Developer | Frontend Engineer",
+    description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
+    images: ["/opengraph-image"],
+  },
+};
 
 const poppins = Poppins({
   subsets: ["latin"],
