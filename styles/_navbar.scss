@@ -3,8 +3,8 @@
 $nav-height: 75px;
 $nav-background: rgba(255, 255, 255, 0.95);
 $nav-text-color: #333;
-$nav-hover-color: #0070f3;
-$nav-active-color: #0070f3;
+$nav-hover-color: #4F46E5;
+$nav-active-color: #4F46E5;
 $mobile-breakpoint: 900px;
 $font-barlow: var(--font-barlow);
 
@@ -49,7 +49,7 @@ $font-barlow: var(--font-barlow);
   color: black;
 
   &:hover {
-    color: blue;
+    color: #4F46E5;
   }
 
 }
