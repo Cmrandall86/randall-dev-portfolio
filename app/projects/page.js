@@ -4,11 +4,11 @@ import styles from "./projects.module.scss";
 export const metadata = {
   title: "Projects | Chris Randall – Software Developer",
   description:
-    "Production software shipped for government agencies and enterprise clients. Enterprise platforms, government CRMs, public records systems, and modern full-stack applications.",
+    "A selection of production software and personal builds that reflect how I think, build, and solve problems across frontend, backend, and product design.",
   openGraph: {
     title: "Projects | Chris Randall – Software Developer",
     description:
-      "Production software shipped for government agencies and enterprise clients. Enterprise platforms, government CRMs, public records systems, and modern applications.",
+      "Production software shipped for government agencies and enterprise clients, plus personal builds demonstrating modern tooling and product thinking.",
     url: "https://www.chrisrandall.dev/projects",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -19,10 +19,10 @@ const projects = [
     id: "navajo-wind",
     name: "Navajo Nation WIND",
     category: "Enterprise Platform",
-    role: "Lead Developer",
+    role: "Lead Developer / Full Stack Ownership",
     url: "https://new.wind.enavajo.org/Login/login.html",
     summary:
-      "Rebuilt a legacy operational platform into a modern JavaScript application for the Navajo Nation's workforce investment network. Owned the full scope of the modernization across frontend, backend, and infrastructure.",
+      "The Navajo Nation's workforce investment platform was a legacy system that needed a full rebuild. I took ownership of the entire modernization, rewriting it as a modern JavaScript application. That meant frontend architecture, RBAC, relational SQL systems, backend services, and AWS infrastructure.",
     owned: [
       "Frontend architecture and full component system",
       "Role-based access control across multiple user tiers",
@@ -30,16 +30,16 @@ const projects = [
       "Third-party integrations and AWS deployments",
     ],
     stack: ["JavaScript", "React", "Node.js", "Express", "MySQL", "AWS"],
-    impact: "313 active users supported across 110 chapters and 5 agencies statewide",
+    impact: "313 active users across 110 chapters and 5 agencies statewide",
   },
   {
     id: "altsd-crm",
     name: "ALTSD CRM",
     category: "Government CRM",
-    role: "Full Stack Developer",
+    role: "Solo Developer",
     url: "https://crm.aging.nm.gov/",
     summary:
-      "Full-stack administrative CRM for the New Mexico Aging and Long-Term Services Department. Delivered partner approval workflows, user management, CMS-driven content publishing, and public-facing event listing components.",
+      "Built this CRM from scratch as the sole developer for the New Mexico Aging and Long-Term Services Department. It handles partner approvals, user management, and internal content workflows. I also built the event listing widgets that power the public-facing calendar on aging.nm.gov.",
     owned: [
       "CRM architecture and administrative dashboard",
       "Partner approval and user management workflows",
@@ -54,10 +54,10 @@ const projects = [
     id: "otero-county",
     name: "Otero County",
     category: "Public Records Platform",
-    role: "Independent Build",
+    role: "Solo Developer",
     url: "https://otero.rtsclients.com/",
     summary:
-      "Public-facing records search and administrative platform built independently for Otero County. Designed and delivered the full application from requirements through production deployment.",
+      "Independently built a public-facing records platform for Otero County, from requirements gathering through production deployment. Includes a public search interface, authentication, role-based access control, and CMS-style tooling for county administrators.",
     owned: [
       "Full application build from requirements to deployment",
       "Authentication system and role-based permissions",
@@ -75,7 +75,7 @@ const projects = [
     role: "Solo Product Build",
     url: "https://stuff-cycler.netlify.app/",
     summary:
-      "Consumer application built to demonstrate product thinking, modern tooling, and end-to-end application ownership. Features authentication, relational data modeling, and a clean product-oriented UX built on React and Supabase.",
+      "A personal project I built to stay sharp on modern tooling and think through a real product from scratch. It includes user authentication, relational data with Supabase, and a clean UI. The goal was end-to-end ownership: schema design, frontend, and deployment.",
     owned: [
       "Product design and UX decisions end-to-end",
       "Authentication system and session management with Supabase",
@@ -90,10 +90,10 @@ const projects = [
     id: "regulation-licensing",
     name: "Regulation & Licensing Department",
     category: "Operational Platform",
-    role: "Frontend Architecture",
+    role: "Frontend Architecture Lead",
     url: null,
     summary:
-      "Large-scale operational workflow platform for a New Mexico state regulatory agency. Responsible for frontend architecture across a complex, multi-workflow application supporting licensing operations statewide.",
+      "Led frontend architecture on a large operational platform for a New Mexico state regulatory agency. The application manages licensing workflows across multiple departments. My focus was building a scalable component system and workflow UI that could support a complex, multi-team environment.",
     owned: [
       "Frontend architecture across a large-scale application",
       "Component system design and implementation",
@@ -111,7 +111,7 @@ const projects = [
     role: "Frontend Developer",
     url: null,
     summary:
-      "Modernized legacy C# interfaces into contemporary web application workflows for the New Mexico Office of the State Auditor. Improved usability, responsiveness, and long-term maintainability of internal audit tooling.",
+      "Modernized the frontend of a legacy C# application used by the Office of the State Auditor. The existing interfaces were outdated and hard to maintain. I rebuilt the UI layer using modern JavaScript and jQuery, improving usability and making the codebase easier to work with going forward.",
     owned: [
       "Legacy interface analysis and modernization planning",
       "Frontend rebuild using modern JavaScript and jQuery",
@@ -120,7 +120,7 @@ const projects = [
     ],
     stack: ["JavaScript", "jQuery", "HTML5", "CSS3"],
     impact:
-      "Modernized internal audit workflows, improving usability and maintainability of legacy government tooling",
+      "Modernized internal audit workflows and improved usability of legacy government tooling",
   },
   {
     id: "ribbn",
@@ -129,15 +129,44 @@ const projects = [
     role: "Frontend Developer",
     url: "https://myribbn.com/",
     summary:
-      "Production e-commerce platform built at a remote startup. Contributed reusable React and Next.js components to a fast-moving product team delivering a modern consumer shopping experience.",
+      "Worked as a frontend developer at Ribbn, a remote e-commerce startup. Contributed reusable React and Next.js components to a fast-moving product team building a modern consumer shopping experience.",
     owned: [
       "Reusable React and Next.js component library",
       "Onboarding flows and product UI",
       "Collaborative delivery on a production codebase",
     ],
     stack: ["React", "Next.js", "Styled Components"],
-    impact:
-      "Shipped production components for a live consumer e-commerce platform",
+    impact: "Shipped production components for a live consumer e-commerce platform",
+  },
+];
+
+const sideProjects = [
+  {
+    id: "found-this",
+    name: "Found This",
+    category: "Side Project",
+    url: "https://found-this.netlify.app/",
+    summary:
+      "A product discovery platform where users can curate and share interesting finds. Built with Next.js 15 and Sanity.io as a headless CMS, with real-time filtering, tag-based browsing, and a clean glass-morphism UI.",
+    stack: ["Next.js", "React", "Sanity.io", "SCSS"],
+  },
+  {
+    id: "nba-scores",
+    name: "NBA Scores App",
+    category: "Side Project",
+    url: "https://crandall-nba-scores.netlify.app/",
+    summary:
+      "Real-time NBA scores and stats tracker. Quick build focused on API integration, clean data display, and a responsive layout using React and Vite.",
+    stack: ["React", "Vite", "Tailwind CSS", "Balldontlie API"],
+  },
+  {
+    id: "countries-explorer",
+    name: "Countries Explorer",
+    category: "Side Project",
+    url: "https://graphql-countries.netlify.app/",
+    summary:
+      "Interactive country data explorer built to practice working with GraphQL and Apollo Client. Clean data-driven interface with search and filtering.",
+    stack: ["React", "GraphQL", "Apollo Client", "Material UI"],
   },
 ];
 
@@ -150,12 +179,12 @@ export default function ProjectsPage() {
         <div className={styles.PageDivider} aria-hidden="true" />
         <h1 className={styles.PageTitle}>Selected Work</h1>
         <p className={styles.PageSubtitle}>
-          Production software shipped for government agencies, enterprise clients, and modern product builds. Each project represents real ownership, shipped code, and direct stakeholder collaboration.
+          A selection of production software and personal builds that reflect how I think, build, and solve problems across frontend, backend, and product design.
         </p>
       </header>
 
-      {/* ── Case Studies ── */}
-      <ol className={styles.ProjectList} aria-label="Project case studies">
+      {/* ── Production Projects ── */}
+      <ul className={styles.ProjectList} aria-label="Production project case studies">
         {projects.map((project) => {
           const isContext = !project.url;
           return (
@@ -164,44 +193,34 @@ export default function ProjectsPage() {
                 className={`${styles.Card} ${isContext ? styles.ContextCard : ''}`}
                 aria-labelledby={`project-${project.id}`}
               >
-                {/* Header row */}
                 <div className={styles.CardHeader}>
                   <span className={styles.CategoryBadge}>{project.category}</span>
                   <span className={styles.RoleBadge}>{project.role}</span>
                 </div>
 
-                {/* Title */}
-                <h2
-                  id={`project-${project.id}`}
-                  className={styles.CardTitle}
-                >
+                <h2 id={`project-${project.id}`} className={styles.CardTitle}>
                   {project.name}
                 </h2>
 
-                {/* Summary */}
                 <p className={styles.CardSummary}>{project.summary}</p>
 
-                {/* Ownership */}
                 <ul className={styles.OwnedList} aria-label="Areas of ownership">
                   {project.owned.map((item) => (
                     <li key={item} className={styles.OwnedItem}>{item}</li>
                   ))}
                 </ul>
 
-                {/* Stack tags */}
                 <div className={styles.StackRow} aria-label="Technologies used">
                   {project.stack.map((tag) => (
                     <span key={tag} className={styles.Tag}>{tag}</span>
                   ))}
                 </div>
 
-                {/* Impact */}
                 <p className={styles.ImpactLine}>
                   <span className={styles.ImpactArrow} aria-hidden="true">→</span>
                   {project.impact}
                 </p>
 
-                {/* Footer */}
                 <div className={styles.CardFooter}>
                   {project.url ? (
                     <Link
@@ -215,7 +234,7 @@ export default function ProjectsPage() {
                     </Link>
                   ) : (
                     <span className={styles.InternalNote}>
-                      Production environment — not publicly accessible
+                      Production environment, not publicly accessible
                     </span>
                   )}
                 </div>
@@ -223,7 +242,55 @@ export default function ProjectsPage() {
             </li>
           );
         })}
-      </ol>
+      </ul>
+
+      {/* ── Side Projects Section ── */}
+      <div className={styles.SectionBreak}>
+        <h2 className={styles.SectionLabel}>Side Projects &amp; Experiments</h2>
+        <div className={styles.SectionDivider} aria-hidden="true" />
+        <p className={styles.SectionSubtitle}>
+          Personal builds and explorations outside of client work.
+        </p>
+      </div>
+
+      <ul className={styles.ProjectList} aria-label="Side projects and experiments">
+        {sideProjects.map((project) => (
+          <li key={project.id}>
+            <article
+              className={styles.SmallCard}
+              aria-labelledby={`project-${project.id}`}
+            >
+              <div className={styles.CardHeader}>
+                <span className={styles.CategoryBadgeMuted}>{project.category}</span>
+              </div>
+
+              <h3 id={`project-${project.id}`} className={styles.CardTitleSm}>
+                {project.name}
+              </h3>
+
+              <p className={styles.CardSummary}>{project.summary}</p>
+
+              <div className={styles.StackRow} aria-label="Technologies used">
+                {project.stack.map((tag) => (
+                  <span key={tag} className={styles.Tag}>{tag}</span>
+                ))}
+              </div>
+
+              <div className={styles.CardFooter}>
+                <Link
+                  href={project.url}
+                  className={styles.LiveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${project.name} (opens in new tab)`}
+                >
+                  View Project <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </article>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

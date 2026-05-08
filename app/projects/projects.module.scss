@@ -63,6 +63,9 @@ $font-inter: var(--font-inter);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 // ─── Case Study Card ──────────────────────────────────────────────────────────
@@ -263,4 +266,73 @@ $font-inter: var(--font-inter);
   color: #9ca3af;
   font-style: italic;
   letter-spacing: 0.01em;
+}
+
+// ─── Section Break (Side Projects) ───────────────────────────────────────────
+
+.SectionBreak {
+  margin: 4rem 0 2rem;
+}
+
+.SectionLabel {
+  font-family: $font-roboto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.65rem;
+  line-height: 1.2;
+}
+
+.SectionDivider {
+  width: 40px;
+  height: 2px;
+  background: #cbd5e1;
+  margin: 0 0 0.9rem;
+}
+
+.SectionSubtitle {
+  font-family: $font-inter;
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+// ─── Small Card (Side Projects) ───────────────────────────────────────────────
+
+.SmallCard {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e8ecf0;
+  border-left: 3px solid #cbd5e1;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem 1.75rem 1.35rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.CategoryBadgeMuted {
+  font-family: $font-inter;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.CardTitleSm {
+  font-family: $font-roboto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.65rem;
+  line-height: 1.25;
 }
