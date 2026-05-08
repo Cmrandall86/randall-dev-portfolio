@@ -1,0 +1,266 @@
+@import '../../styles/homepage';
+@import '../../styles/navbar';
+
+$font-roboto: var(--font-roboto);
+$font-inter: var(--font-inter);
+
+// ─── Page Wrapper ─────────────────────────────────────────────────────────────
+
+.PageWrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem 5rem;
+  }
+}
+
+// ─── Page Header ──────────────────────────────────────────────────────────────
+
+.PageHeader {
+  margin-bottom: 3.5rem;
+}
+
+.PagePreTitle {
+  font-family: $font-barlow;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9aa3af;
+  margin: 0 0 0.75rem;
+}
+
+.PageDivider {
+  width: 48px;
+  height: 2px;
+  background: $nav-active-color;
+  margin: 0 0 1.5rem;
+}
+
+.PageTitle {
+  font-family: $font-playfair;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #1a202c;
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+.PageSubtitle {
+  font-family: $font-inter;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0;
+}
+
+// ─── Project List ─────────────────────────────────────────────────────────────
+
+.ProjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// ─── Case Study Card ──────────────────────────────────────────────────────────
+
+.Card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e8ecf0;
+  border-left: 4px solid $nav-active-color;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 2rem 1.75rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+    transform: translateY(-2px);
+  }
+
+  &.ContextCard {
+    border-left-color: #94a3b8;
+    opacity: 0.92;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.25rem 1.5rem;
+  }
+}
+
+// ─── Card Header Row ──────────────────────────────────────────────────────────
+
+.CardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.CategoryBadge {
+  font-family: $font-inter;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $nav-active-color;
+
+  .ContextCard & {
+    color: #64748b;
+  }
+}
+
+.RoleBadge {
+  font-family: $font-inter;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 0.22rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+// ─── Card Title ───────────────────────────────────────────────────────────────
+
+.CardTitle {
+  font-family: $font-roboto;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+// ─── Card Summary ─────────────────────────────────────────────────────────────
+
+.CardSummary {
+  font-family: $font-inter;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #4a5568;
+  margin: 0 0 1.25rem;
+}
+
+// ─── Ownership List ───────────────────────────────────────────────────────────
+
+.OwnedList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.OwnedItem {
+  font-family: $font-inter;
+  font-size: 0.83rem;
+  color: #374151;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  line-height: 1.5;
+
+  &::before {
+    content: "→";
+    color: $nav-active-color;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+
+    .ContextCard & {
+      color: #94a3b8;
+    }
+  }
+}
+
+// ─── Stack Tags ───────────────────────────────────────────────────────────────
+
+.StackRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.Tag {
+  background: #f0f4f8;
+  color: #374151;
+  font-family: $font-inter;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+// ─── Impact Callout ───────────────────────────────────────────────────────────
+
+.ImpactLine {
+  font-family: $font-inter;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #374151;
+  background: #f8fafc;
+  border-left: 2px solid #e2e8f0;
+  padding: 0.45rem 0.75rem;
+  margin: 0 0 1.5rem;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.5;
+}
+
+.ImpactArrow {
+  color: $nav-active-color;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+
+// ─── Card Footer ──────────────────────────────────────────────────────────────
+
+.CardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.LiveLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: $font-inter;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $nav-active-color;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+
+  &:hover {
+    gap: 0.6rem;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $nav-active-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+.InternalNote {
+  font-family: $font-inter;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
