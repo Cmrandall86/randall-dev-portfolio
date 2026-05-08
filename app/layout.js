@@ -9,11 +9,25 @@ import { Poppins, Playfair_Display, Barlow_Semi_Condensed, Roboto, Inter, Source
 
 export const metadata = {
   title: "Chris Randall | Software Developer | Frontend Engineer",
-  description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
+  description:
+    "Software Developer with shipped production software for government agencies and enterprise clients. JavaScript, React, Node.js, SQL, AWS, and modern AI-assisted engineering workflows. Open to remote opportunities.",
   metadataBase: new URL("https://www.chrisrandall.dev"),
+  keywords: [
+    "Software Developer",
+    "Frontend Engineer",
+    "React Developer",
+    "JavaScript",
+    "Node.js",
+    "Next.js",
+    "Full Stack",
+    "Remote Developer",
+    "New Mexico",
+    "Albuquerque",
+  ],
   openGraph: {
     title: "Chris Randall | Software Developer | Frontend Engineer",
-    description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
+    description:
+      "Shipped production software for government agencies and enterprise clients. JavaScript, React, Node.js, SQL, AWS, and AI-assisted engineering workflows.",
     url: "https://www.chrisrandall.dev",
     siteName: "Chris Randall",
     images: [
@@ -21,15 +35,17 @@ export const metadata = {
         url: "/Chris_Randall.jpg",
         width: 800,
         height: 800,
-        alt: "Chris Randall – Software Developer | Frontend Engineer",
+        alt: "Chris Randall, Software Developer based in Albuquerque, NM",
       },
     ],
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Chris Randall | Software Developer | Frontend Engineer",
-    description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
+    description:
+      "Shipped production software for government agencies and enterprise clients. JavaScript, React, Node.js, SQL, AWS, and AI-assisted engineering workflows.",
     images: ["/Chris_Randall.jpg"],
   },
 };

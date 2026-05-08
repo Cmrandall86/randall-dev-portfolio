@@ -4,6 +4,301 @@
 $font-roboto: var(--font-roboto);
 $font-inter: var(--font-inter);
 
+// ─── Hero Enhancements ────────────────────────────────────────────────────────
+
+.TechStack {
+  color: #a0aec0;
+  font-size: clamp(12px, 1.15vw, 15px);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  font-family: $font-inter;
+  font-weight: 500;
+}
+
+.HeroTagline {
+  font-size: clamp(14px, 1.25vw, 16px);
+  line-height: 1.75;
+  color: #4a5568;
+  font-family: $font-inter;
+  max-width: 500px;
+  margin: 0 0 2rem;
+}
+
+.HeroCTAs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
+}
+
+.CTAPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.5rem;
+  background: $nav-active-color;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: $font-inter;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: darken($nav-active-color, 8%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 112, 243, 0.35);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $nav-active-color;
+    outline-offset: 3px;
+  }
+}
+
+.CTAOutline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.5rem;
+  background: transparent;
+  color: #374151;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: $font-inter;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: $nav-active-color;
+    color: $nav-active-color;
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $nav-active-color;
+    outline-offset: 3px;
+  }
+}
+
+// ─── Trust Strip ─────────────────────────────────────────────────────────────
+
+.TrustStrip {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2.5rem auto 0;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid #e8ecf0;
+  border-bottom: 1px solid #e8ecf0;
+
+  @media (max-width: 768px) {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.TrustInner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.TrustLabel {
+  font-family: $font-barlow;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9aa3af;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.TrustList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.TrustItem {
+  font-family: $font-inter;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #4a5568;
+  padding: 0 1rem;
+  border-right: 1px solid #d1d5db;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.2rem 0;
+    border-right: none;
+  }
+}
+
+// ─── Selected Work ────────────────────────────────────────────────────────────
+
+.WorkSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 2rem 4rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem 3rem;
+  }
+}
+
+.WorkInner {
+  width: 100%;
+}
+
+.SectionHeader {
+  margin-bottom: 2.5rem;
+}
+
+.PreTitleAlt {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: #9aa3af;
+  font-family: $font-barlow;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.DividerAlt {
+  width: 48px;
+  height: 2px;
+  background: $nav-active-color;
+  margin-top: 12px;
+}
+
+.ProjectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ProjectCard {
+  background: white;
+  border-radius: 10px;
+  padding: 1.75rem;
+  border: 1px solid #e8ecf0;
+  border-left: 3px solid $nav-active-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+  }
+}
+
+.ProjectMeta {
+  margin-bottom: 0.5rem;
+}
+
+.ProjectType {
+  font-family: $font-inter;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $nav-active-color;
+}
+
+.ProjectName {
+  font-family: $font-roboto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.75rem;
+}
+
+.ProjectDesc {
+  font-family: $font-inter;
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #4a5568;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+.StackTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.Tag {
+  background: #f0f4f8;
+  color: #4a5568;
+  font-family: $font-inter;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+.ProjectLink {
+  font-family: $font-inter;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: $nav-active-color;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: auto;
+  width: fit-content;
+  transition: gap 0.2s ease, text-decoration 0.1s ease;
+
+  &:hover {
+    gap: 0.55rem;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $nav-active-color;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
 .AboutSection {
   position: relative;
   overflow: hidden;

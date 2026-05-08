@@ -24,6 +24,7 @@ $color-light: #758398;
     top: 0;
     opacity: 0.3;
     position: absolute;
+    pointer-events: none;
     background-repeat: no-repeat;
     background-position: top right;
     transition: background 0.3s;
