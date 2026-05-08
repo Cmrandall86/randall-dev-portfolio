@@ -181,51 +181,6 @@ $font-inter: var(--font-inter);
   }
 }
 
-// ─── Capability Strip ────────────────────────────────────────────────────────
-
-.CapabilityStrip {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
-
-  @media (max-width: 768px) {
-    padding: 1.25rem 1rem;
-  }
-}
-
-.CapabilityList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 0;
-  row-gap: 0.5rem;
-}
-
-.CapabilityItem {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  font-family: $font-inter;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #374151;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-}
-
-.CapSep {
-  color: $nav-active-color;
-  font-size: 1rem;
-  line-height: 1;
-  opacity: 0.6;
-  margin: 0;
-  user-select: none;
-}
 
 // ─── Selected Work ────────────────────────────────────────────────────────────
 

@@ -6,13 +6,6 @@ import ResponsiveImage from "@components/Image";
 import Link from "next/link";
 import { useState } from 'react';
 
-const capabilities = [
-  "Enterprise Platforms",
-  "Frontend Architecture",
-  "Full Stack Delivery",
-  "SQL + Cloud Systems",
-  "AI-Assisted Engineering",
-];
 
 const projects = [
   {
@@ -142,19 +135,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Capability Strip ── */}
-      <section className={styles.CapabilityStrip} aria-label="Core capabilities">
-        <ul className={styles.CapabilityList} role="list">
-          {capabilities.map((cap, i) => (
-            <li key={cap} className={styles.CapabilityItem}>
-              {cap}
-              {i < capabilities.length - 1 && (
-                <span className={styles.CapSep} aria-hidden="true">·</span>
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
 
       {/* ── Selected Work ── */}
       <section className={styles.WorkSection} aria-labelledby="work-heading">
