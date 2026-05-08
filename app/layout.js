@@ -18,9 +18,9 @@ export const metadata = {
     siteName: "Chris Randall",
     images: [
       {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
+        url: "/Chris_Randall.jpg",
+        width: 800,
+        height: 800,
         alt: "Chris Randall – Software Developer | Frontend Engineer",
       },
     ],
@@ -30,7 +30,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Chris Randall | Software Developer | Frontend Engineer",
     description: "Frontend engineering, product-focused development, and modern AI-assisted engineering workflows.",
-    images: ["/opengraph-image"],
+    images: ["/Chris_Randall.jpg"],
   },
 };
 
