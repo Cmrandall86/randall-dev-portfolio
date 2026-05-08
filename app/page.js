@@ -6,37 +6,53 @@ import ResponsiveImage from "@components/Image";
 import Link from "next/link";
 import { useState } from 'react';
 
+const capabilities = [
+  "Enterprise Platforms",
+  "Frontend Architecture",
+  "Full Stack Delivery",
+  "SQL + Cloud Systems",
+  "AI-Assisted Engineering",
+];
+
 const projects = [
   {
     name: "Navajo Nation WIND",
     type: "Enterprise Platform",
+    role: "Lead Developer",
     description:
-      "Rebuilt a legacy operational system into a modern JavaScript application supporting 313 users across 110 chapters and 5 agencies. Owned frontend architecture, RBAC, SQL workflows, backend services, and AWS deployments.",
-    stack: ["JavaScript", "React", "Node.js", "MySQL", "AWS", "RBAC"],
+      "Rebuilt a legacy workforce system into a modern JavaScript application for the Navajo Nation's operational network.",
+    stack: ["JavaScript", "React", "Node.js", "Express", "MySQL", "AWS"],
+    impact: "313 active users across 110 chapters and 5 agencies",
     url: "https://new.wind.enavajo.org/Login/login.html",
   },
   {
     name: "ALTSD CRM",
     type: "Government CRM",
+    role: "Full Stack Developer",
     description:
-      "Full-stack administrative CRM for the New Mexico Aging and Long-Term Services Department. Supports partner approvals, user management, CMS workflows, and public event publishing.",
-    stack: ["React", "Node.js", "MySQL", "CMS", "Full-Stack"],
+      "Administrative CRM for NM Aging and Long-Term Services with partner approvals, user management, and public content publishing.",
+    stack: ["React", "Node.js", "Express", "MySQL"],
+    impact: "Operational platform for statewide aging services administration",
     url: "https://crm.aging.nm.gov/",
   },
   {
     name: "Stuff-Cycler",
     type: "Side Project",
+    role: "Frontend Architecture",
     description:
-      "Modern React and Supabase application demonstrating product thinking, authentication flows, relational data modeling, and end-to-end application architecture.",
-    stack: ["React", "Supabase", "Authentication", "Netlify"],
+      "Consumer app with authentication, relational data modeling, and end-to-end product architecture built on React and Supabase.",
+    stack: ["React", "Supabase", "SQL", "Netlify"],
+    impact: "Demonstrates product thinking, auth flows, and modern stack decisions",
     url: "https://stuff-cycler.netlify.app/",
   },
   {
     name: "Otero County",
     type: "Public Records Platform",
+    role: "Independent Build",
     description:
-      "Public-facing records search and administrative platform built independently. Includes authentication, role-based permissions, search workflows, and CMS-style administrative tooling.",
-    stack: ["React", "Node.js", "MySQL", "Auth", "CMS"],
+      "Public-facing records search platform with RBAC, search workflows, and CMS-style administrative tooling, built independently.",
+    stack: ["React", "Node.js", "Express", "MySQL", "SQL"],
+    impact: "Production platform serving county-level public records access",
     url: "https://otero.rtsclients.com/",
   },
 ];
@@ -54,28 +70,25 @@ export default function HomePage() {
 
   return (
     <div className={styles.HomePageWrapper}>
-      <div className={styles.BackgroundGradient} />
+      <div className={styles.BackgroundGradient} aria-hidden="true" />
 
       {/* ── Hero ── */}
       <section className="w-100 Hero" aria-label="Introduction">
         <div className={styles.Content}>
           <div className={styles.LS}>
             <div>
-              <div className={styles.PreTitle}>HELLO, MY NAME IS</div>
-              <div className={styles.Divider} />
-
               <h1 className={styles.Title}>Chris Randall</h1>
               <div className={styles.SubTitle} style={{ marginBottom: '16px' }}>
                 Software Developer | Frontend Engineer
               </div>
-              <div className={styles.TechStack}>
+              <div className={styles.TechStack} aria-label="Core technologies">
                 JavaScript&nbsp;•&nbsp;React&nbsp;•&nbsp;Node.js&nbsp;•&nbsp;SQL&nbsp;•&nbsp;AWS&nbsp;•&nbsp;AI-Assisted Engineering
               </div>
               <p className={styles.HeroTagline}>
                 Enterprise software, thoughtfully built.<br />
                 Frontend focused. Full-stack capable. Product minded.
               </p>
-              <div className={styles.HeroCTAs}>
+              <nav className={styles.HeroCTAs} aria-label="Quick links">
                 <Link href="/resume" className={styles.CTAPrimary}>
                   Resume
                 </Link>
@@ -100,7 +113,7 @@ export default function HomePage() {
                 <Link href="/projects" className={styles.CTAOutline}>
                   Projects
                 </Link>
-              </div>
+              </nav>
             </div>
           </div>
           <div className={styles.RS}>
@@ -129,26 +142,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Capability Strip ── */}
+      <section className={styles.CapabilityStrip} aria-label="Core capabilities">
+        <ul className={styles.CapabilityList} role="list">
+          {capabilities.map((cap, i) => (
+            <li key={cap} className={styles.CapabilityItem}>
+              {cap}
+              {i < capabilities.length - 1 && (
+                <span className={styles.CapSep} aria-hidden="true">·</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* ── Selected Work ── */}
-      <section className={styles.WorkSection} aria-label="Featured projects">
+      <section className={styles.WorkSection} aria-labelledby="work-heading">
         <div className={styles.WorkInner}>
           <div className={styles.SectionHeader}>
-            <div className={styles.PreTitleAlt}>SELECTED WORK</div>
-            <div className={styles.DividerAlt} />
+            <h2 id="work-heading" className={styles.PreTitleAlt}>Selected Work</h2>
+            <div className={styles.DividerAlt} aria-hidden="true" />
           </div>
           <div className={styles.ProjectGrid}>
             {projects.map((project) => (
               <article key={project.name} className={styles.ProjectCard}>
-                <div className={styles.ProjectMeta}>
+                <div className={styles.ProjectHeader}>
                   <span className={styles.ProjectType}>{project.type}</span>
+                  <span className={styles.ProjectRole}>{project.role}</span>
                 </div>
-                <h2 className={styles.ProjectName}>{project.name}</h2>
+                <h3 className={styles.ProjectName}>{project.name}</h3>
                 <p className={styles.ProjectDesc}>{project.description}</p>
                 <div className={styles.StackTags} aria-label="Technologies used">
                   {project.stack.map((tag) => (
                     <span key={tag} className={styles.Tag}>{tag}</span>
                   ))}
                 </div>
+                <p className={styles.ImpactLine}>
+                  <span aria-hidden="true" className={styles.ImpactArrow}>→</span>
+                  {project.impact}
+                </p>
                 {project.url && (
                   <Link
                     href={project.url}
@@ -167,12 +199,12 @@ export default function HomePage() {
       </section>
 
       {/* ── About ── */}
-      <section className={styles.AboutSection} aria-label="About Chris Randall">
+      <section className={styles.AboutSection} aria-labelledby="about-heading">
         <div className={styles.AboutMe}>
           <div className={styles.headerSection}>
             <div className={styles.leftSide}>
-              <div className={styles.PreTitle}>ABOUT ME</div>
-              <div className={styles.Divider} />
+              <h2 id="about-heading" className={styles.PreTitle}>About Me</h2>
+              <div className={styles.Divider} aria-hidden="true" />
             </div>
 
             <div className={styles.tabButtons} role="tablist" aria-label="About sections">
@@ -218,7 +250,7 @@ export default function HomePage() {
                 </p>
                 <div className={styles.summaryLinks}>
                   <Link href="/projects">View Projects</Link>
-                  <span>•</span>
+                  <span aria-hidden="true">•</span>
                   <Link href="/resume">Resume</Link>
                 </div>
               </div>
@@ -325,6 +357,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Mobile Sticky CTA ── */}
+      <nav className={styles.MobileStickyCTA} aria-label="Quick contact links">
+        <Link href="/resume" className={styles.StickyBtn}>
+          Resume
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/chris-randall-dev/"
+          className={styles.StickyBtn}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn (opens in new tab)"
+        >
+          LinkedIn
+        </Link>
+        <Link
+          href="mailto:cmrandall86@gmail.com"
+          className={styles.StickyBtn}
+          aria-label="Send email"
+        >
+          Email
+        </Link>
+      </nav>
     </div>
   );
 }

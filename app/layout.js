@@ -24,6 +24,12 @@ export const metadata = {
     "New Mexico",
     "Albuquerque",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Chris Randall | Software Developer | Frontend Engineer",
     description:
@@ -32,10 +38,10 @@ export const metadata = {
     siteName: "Chris Randall",
     images: [
       {
-        url: "/Chris_Randall.jpg",
-        width: 800,
-        height: 800,
-        alt: "Chris Randall, Software Developer based in Albuquerque, NM",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Chris Randall, Software Developer | Frontend Engineer",
       },
     ],
     type: "website",
@@ -46,7 +52,7 @@ export const metadata = {
     title: "Chris Randall | Software Developer | Frontend Engineer",
     description:
       "Shipped production software for government agencies and enterprise clients. JavaScript, React, Node.js, SQL, AWS, and AI-assisted engineering workflows.",
-    images: ["/Chris_Randall.jpg"],
+    images: ["/og-image.png"],
   },
 };
 
