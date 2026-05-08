@@ -22,8 +22,8 @@ export default function HomePage() {
               <div className={styles.Divider} />
 
               <h2 className={styles.Title}>Chris Randall</h2>
-              <div className={styles.SubTitle}>Web Developer</div>
-              <Link href="https://www.linkedin.com/in/chris-randall-1b2919167/" className={styles.Contact}>
+              <div className={styles.SubTitle}>Software Developer | Frontend Engineer</div>
+              <Link href="https://www.linkedin.com/in/chris-randall-dev/" className={styles.Contact}>
                 <LinkedIn_icon />
                 LinkedIn Profile
               </Link>
