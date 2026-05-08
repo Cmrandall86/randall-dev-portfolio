@@ -22,7 +22,10 @@ export default function HomePage() {
               <div className={styles.Divider} />
 
               <h2 className={styles.Title}>Chris Randall</h2>
-              <div className={styles.SubTitle}>Software Developer | Frontend Engineer</div>
+              <div className={styles.SubTitle} style={{ marginBottom: '16px' }}>Software Developer | Frontend Engineer</div>
+              <div style={{ color: '#a0aec0', fontSize: 'clamp(13px, 1.3vw, 16px)', marginBottom: '60px', letterSpacing: '0.03em', fontFamily: 'var(--font-inter)' }}>
+                JavaScript&nbsp;&nbsp;•&nbsp;&nbsp;React&nbsp;&nbsp;•&nbsp;&nbsp;Node.js&nbsp;&nbsp;•&nbsp;&nbsp;AI-Assisted Engineering
+              </div>
               <Link href="https://www.linkedin.com/in/chris-randall-dev/" className={styles.Contact}>
                 <LinkedIn_icon />
                 LinkedIn Profile
@@ -68,14 +71,13 @@ export default function HomePage() {
             {activeTab === 'professional' ? (
               <div className={styles.Summary}>
                 <p>
-                  I&apos;m a front-end developer with a strong foundation in React, Next.js, and modern JavaScript frameworks, focused on building responsive, user-friendly web applications. I started my career on a business and hospitality trajectory but gradually realized my passion for technology, leading me to pivot into programming. That experience taught me how to communicate effectively, adapt to new challenges, and work effectively within a team—fostering strong collaboration and a positive, open communication style.
-                </p>
-
-                <p>
-                  My experience includes developing CMS platforms, internal CRM tools, and data-driven applications for both private clients and government agencies. I&apos;ve worked on e-commerce platforms, public data search tools, and embeddable UI components, always prioritizing clean code, performance optimization, and seamless user experiences.
+                  I&apos;m a Software Developer building enterprise-scale and public-facing web applications with JavaScript, React, Node.js, Express, MySQL, and AWS. My work spans frontend architecture, backend service integrations, relational SQL systems, cloud deployments, and direct stakeholder collaboration across the full product lifecycle.
                 </p>
                 <p>
-                  I thrive in collaborative environments, working closely with designers, product managers, and backend engineers to bring ideas to life. I&apos;m always eager to learn new technologies and refine my skills, whether it&apos;s enhancing UI/UX, improving accessibility, or integrating complex APIs.
+                  At Real Time Solutions, I&apos;ve led development on production platforms for New Mexico state agencies and public institutions, including a full enterprise rebuild for the Navajo Nation, a CRM for the Aging &amp; Long-Term Services Department, a public records platform for Otero County, and frontend modernization work for the Office of the State Auditor. I work directly with clients from discovery through delivery, and I incorporate AI-assisted engineering tools as a natural part of my workflow.
+                </p>
+                <p>
+                  I&apos;m open to remote opportunities where I can contribute meaningfully to product development using modern tooling and collaborative engineering practices.
                 </p>
 
                 <div className={styles.summaryLinks}>
@@ -133,13 +135,13 @@ export default function HomePage() {
             </div>
 
             <div className={styles.SkillCategory}>
-              <h3>Tools & Methods</h3>
+              <h3>Tools & Platforms</h3>
               <ul>
                 <li>Git & GitHub</li>
-                <li>AWS Lambda</li>
-                <li>VS Code</li>
-                <li>Styled Components</li>
-                <li>Agile/Scrum</li>
+                <li>AWS S3 & Lambda</li>
+                <li>Kendo UI</li>
+                <li>VS Code / Cursor</li>
+                <li>AI-Assisted Workflows</li>
                 <li>Responsive Design</li>
               </ul>
             </div>
@@ -149,28 +151,25 @@ export default function HomePage() {
           <div className={styles.Journey}>
             <h3>My Journey</h3>
             <p>
-              My path to web development wasn&apos;t traditional, but it was always driven by curiosity, creativity, and a love for problem-solving.
+              My path into software wasn&apos;t traditional, but it was deliberate.
             </p>
             <p>
-              I initially pursued business management, earning an associate degree and spending the next decade working in the restaurant industry. 
-              I wore just about every hat—trainer, headwaiter, bartender, and beyond—learning firsthand how to adapt, lead, and solve problems under pressure. 
-              But while I enjoyed the fast-paced environment, I knew I wanted to build something.
+              I started out studying business management, earned an associate degree, and spent the following decade in the restaurant industry working every 
+              role from trainer to headwaiter to bartender. That environment taught me how to stay composed under pressure, communicate clearly, and own 
+              problems without passing them off.
             </p>
             <p>
-              I started exploring design and digital tools, taking courses in Photoshop, Illustrator, and graphic design. That creative itch eventually 
-              led me to web development, where I found the perfect blend of logic and creativity. In 2019, I went back to school to earn a certificate 
-              in web programming, and soon after graduating, I joined <Link href="https://myribbn.com" target="_blank" className={styles.journeyLink}>Ribbn</Link>.
+              I&apos;d always been curious about technology. That curiosity turned serious when I started exploring design, then development, and eventually 
+              went back to school to earn a certificate in web programming. After graduating, I joined <Link href="https://myribbn.com" target="_blank" className={styles.journeyLink}>Ribbn</Link>, 
+              a remote startup where I built reusable React and Next.js components for a production e-commerce platform alongside a small, fast-moving team.
             </p>
             <p>
-              At Ribbn, I worked remotely as a front-end developer, building a React and Next.js-powered e-commerce platform. The tech stack also included 
-              TypeScript, Tailwind CSS, and Firebase, and I loved the challenge of creating scalable, reusable components while collaborating with a small, 
-              fast-moving team. Unfortunately, as a small startup, Ribbn faced funding challenges and had to make difficult decisions. In early 2024, I moved 
-              on to Real Time Solutions, where I&apos;ve worked on a range of projects, including government CMS applications and internal business tools.
+              When Ribbn wound down in early 2024, I moved to Real Time Solutions. Since then I&apos;ve shipped production software for New Mexico state agencies 
+              and government departments, taken on full application ownership across multiple platforms, and sharpened my skills across the full stack, 
+              including frontend architecture, backend services, SQL systems, and AWS deployments.
             </p>
             <p>
-              Now, I&apos;m looking to return to remote work—not just for flexibility, but because I&apos;m more productive, more focused, and ultimately a better 
-              developer in my home setup. Working remotely also allows me to be more present for my family while continuing to grow as a developer and 
-              contribute meaningfully to impactful projects.
+              I&apos;m looking for remote work where I can contribute to interesting products with a team that cares about what they&apos;re building.
             </p>
           </div>
 
