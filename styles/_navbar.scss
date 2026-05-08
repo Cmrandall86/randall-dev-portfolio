@@ -124,31 +124,15 @@ $font-barlow: var(--font-barlow);
   align-items: center;
   
   svg {
-    height: 34px;
+    height: 26px;
     width: auto;
-    
-    path:first-child {
-      color: $nav-active-color;
-    }
-    
-    path:last-child {
-      color: #333;
-    }
-
-    text {
-      font-size: 120%;
-    }
   }
 
   @media (max-width: $mobile-breakpoint) {
     height: 45px;
-    
+
     svg {
-      height: 28px;
-      
-      text {
-        font-size: 120%;
-      }
+      height: 22px;
     }
   }
 }
