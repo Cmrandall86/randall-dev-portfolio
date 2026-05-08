@@ -69,10 +69,11 @@ export default function HomePage() {
                 Software Developer | Frontend Engineer
               </div>
               <div className={styles.TechStack}>
-                JavaScript&nbsp;&nbsp;•&nbsp;&nbsp;React&nbsp;&nbsp;•&nbsp;&nbsp;Node.js&nbsp;&nbsp;•&nbsp;&nbsp;SQL&nbsp;&nbsp;•&nbsp;&nbsp;AWS&nbsp;&nbsp;•&nbsp;&nbsp;AI-Assisted Engineering
+                JavaScript&nbsp;•&nbsp;React&nbsp;•&nbsp;Node.js&nbsp;•&nbsp;SQL&nbsp;•&nbsp;AWS&nbsp;•&nbsp;AI-Assisted Engineering
               </div>
               <p className={styles.HeroTagline}>
-                Shipped production software for government agencies and enterprise clients across the full stack. Frontend strength, backend ownership, and modern engineering workflows.
+                Enterprise software, thoughtfully built.<br />
+                Frontend focused. Full-stack capable. Product minded.
               </p>
               <div className={styles.HeroCTAs}>
                 <Link href="/resume" className={styles.CTAPrimary}>
