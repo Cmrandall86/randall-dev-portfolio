@@ -29,14 +29,14 @@ const projects = [
     url: "https://crm.aging.nm.gov/",
   },
   {
-    name: "Stuff-Cycler",
+    name: "Circulate",
     type: "Side Project",
     role: "Frontend Architecture",
     description:
       "Consumer app with authentication, relational data modeling, and end-to-end product architecture built on React and Supabase.",
     stack: ["React", "Supabase", "SQL", "Netlify"],
     impact: "Demonstrates product thinking, auth flows, and modern stack decisions",
-    url: "https://stuff-cycler.netlify.app/",
+    url: "https://use-circulate.netlify.app/",
   },
   {
     name: "Otero County",
