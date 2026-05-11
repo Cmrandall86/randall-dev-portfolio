@@ -72,7 +72,7 @@ const projects = [
     id: "circulate",
     name: "Circulate",
     category: "Modern Side Project",
-    role: "Solo Product Build",
+    role: "Solo Full-Stack Developer",
     url: "https://use-circulate.netlify.app/",
     summary:
       "A personal project I built to stay sharp on modern tooling and think through a real product from scratch. It includes user authentication, relational data with Supabase, and a clean UI. The goal was end-to-end ownership: schema design, frontend, and deployment.",

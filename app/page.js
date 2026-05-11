@@ -31,7 +31,7 @@ const projects = [
   {
     name: "Circulate",
     type: "Side Project",
-    role: "Frontend Architecture",
+    role: "Solo Full-Stack Developer",
     description:
       "Consumer app with authentication, relational data modeling, and end-to-end product architecture built on React and Supabase.",
     stack: ["React", "Supabase", "SQL", "Netlify"],
