@@ -8,7 +8,7 @@ export default function Resume() {
     <div className={styles.page}>
       <main className={styles.resume}>
         <button onClick={() => window.print()} className={styles.downloadBtn}>
-          Download PDF
+          Download Resume PDF
         </button>
         {/* ── HEADER ── */}
         <header className={styles.header}>
