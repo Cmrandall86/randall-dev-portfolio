@@ -1,90 +1,107 @@
-# Next + Netlify Starter
+# Chris Randall — Developer Portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
 
-This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
+Personal portfolio and developer site for Chris Randall, built with Next.js 14 and deployed on Netlify.
 
-This project is a very minimal starter that includes 2 sample components, a global stylesheet, a `netlify.toml` for deployment, and a `jsconfig.json` for setting up absolute imports and aliases. With Netlify, you'll have access to features like Preview Mode, server-side rendering/incremental static regeneration via Netlify Functions, and internationalized routing on deploy automatically.
+**Live site:** [chrisrandall.dev](https://www.chrisrandall.dev)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+---
 
-(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
+## Tech Stack
 
-## Table of Contents:
+- **Framework:** Next.js 14 (App Router)
+- **UI:** React 18, MUI v5, styled-components v6
+- **Styling:** SCSS Modules, Tailwind CSS, Framer Motion
+- **Fonts:** next/font/google (Poppins, Playfair Display, Barlow Semi Condensed, Roboto, Inter)
+- **Deploy:** Netlify
 
-- [Getting Started](#getting-started)
-- [Installation options](#installation-options)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-  - [Removing Cypress](#removing-cypress)
+---
 
-## Getting Started
+## Pages
 
-First, run the development server:
+| Route | Description |
+|-------|-------------|
+| `/` | Home — hero, selected work, about |
+| `/resume` | Resume / experience |
+| `/projects` | Full project list |
+
+---
+
+## Local Development
+
+### Prerequisites
+
+This project requires **Node.js 20 LTS**. It will not run correctly on Node 21.0.0 due to a known incompatibility between that version and the Dart-compiled Sass binary.
+
+If you don't have `nvm`:
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+
+Then close and reopen your terminal.
+
+### Setup
 
 ```bash
+git clone <repo-url>
+cd randall-dev-portfolio
+nvm install        # installs Node 20 from .nvmrc
+nvm use
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Scripts
 
-### Installation options
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm start` | Start production server locally |
 
-**Option one:** One-click deploy
+---
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
+## Project Structure
 
-**Option two:** Manual clone
-
-1. Clone this repo: `git clone https://github.com/netlify-templates/next-netlify-starter.git`
-2. Navigate to the directory and run `npm install`
-3. Run `npm run dev`
-4. Make your changes
-5. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
-
-## Testing
-
-### Included Default Testing
-
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
-
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
-- [Cypress](https://www.cypress.io/) - to run tests against how the template runs in the browser
-- [Cypress Netlify Build Plugin](https://github.com/cypress-io/netlify-plugin-cypress) - to run our tests during our build process
-
-If your team is not interested in this tooling, you can remove them with ease!
-
-### Removing Renovate
-
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
-
-### Removing Cypress
-
-For our testing, we use [Cypress](https://www.cypress.io/) for end-to-end testing. This makes sure that we can validate that our templates are rendering and displaying as we’d expect. By default, we have Cypress not generate deploy links if our tests don’t pass. If you’d like to keep Cypress and still generate the deploy links, go into your `netlify.toml` and delete the plugin configuration lines:
-
-```diff
-[[plugins]]
-  package = "netlify-plugin-cypress"
--  [plugins.inputs.postBuild]
--    enable = true
--
--  [plugins.inputs]
--    enable = false 
+```
+app/
+  layout.js           # Root layout, fonts, global metadata
+  page.js             # Home page
+  resume/page.js      # Resume page
+  projects/page.js    # Projects page
+components/
+  NavBar.js           # Sticky nav with mobile hamburger menu
+  Footer.js           # Footer with links
+  Logo.js             # SVG logo mark
+  Image.js            # next/image wrapper with aspect ratio helpers
+  Text.js             # styled-components text span
+  Input.js            # styled-components labeled input
+styles/
+  globals.scss        # Global styles
+  _navbar.scss        # Nav styles (also imported globally)
+  _homepage.scss      # Home page partials
+  _projects.scss      # Projects page partials
+public/
+  favicon.svg
+  grad.svg            # Hero background gradient
 ```
 
-If you’d like to remove the `netlify-plugin-cypress` build plugin entirely, you’d need to delete the entire block above instead. And then make sure sure to remove the package from the dependencies using:
+**Path aliases** (configured in `jsconfig.json`):
+- `@components/*` → `components/*`
+- `@styles/*` → `styles/*`
 
-```bash
-npm uninstall -D netlify-plugin-cypress
-```
+---
 
-And lastly if you’d like to remove Cypress entirely, delete the entire `cypress` folder and the `cypress.config.ts` file. Then remove the dependency using:
+## Deployment
 
-```bash
-npm uninstall -S cypress
+Deploys automatically to Netlify on push to `main`.
+
+```toml
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = ".next"
 ```
