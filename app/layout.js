@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import Footer from "@components/Footer";
 import NavBar from "@components/NavBar";
 
-import { Poppins, Playfair_Display, Barlow_Semi_Condensed, Roboto, Inter, Source_Serif_Pro } from "next/font/google";
+import { Poppins, Playfair_Display, Barlow_Semi_Condensed, Roboto, Inter } from "next/font/google";
 
 export const metadata = {
   title: "Chris Randall | Software Developer | Frontend Engineer",
