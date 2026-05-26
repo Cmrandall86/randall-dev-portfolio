@@ -142,6 +142,15 @@ const projects = [
 
 const sideProjects = [
   {
+    id: "repo-starter",
+    name: "Repo-Starter",
+    category: "Side Project",
+    url: "https://repo-starter.netlify.app/",
+    summary:
+      "Interactive startup checklist for spinning up a new React + TypeScript project. A wizard-style runbook with copy-ready shell commands, Cursor prompts, and progress tracking that persists in the browser.",
+    stack: ["React", "TypeScript", "Vite", "Vitest"],
+  },
+  {
     id: "found-this",
     name: "Found This",
     category: "Side Project",
