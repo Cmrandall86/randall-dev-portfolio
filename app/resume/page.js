@@ -48,7 +48,7 @@ export default function Resume() {
         <section className={styles.section}>
           <h2>Professional Summary</h2>
           <p>
-            Software Developer building enterprise-scale and public-facing web applications with JavaScript, React, Node.js, Express, MySQL, and AWS. Experienced in frontend architecture, API integrations, relational SQL systems, cloud deployments, and close stakeholder collaboration, with a track record of delivering polished, scalable software products.
+            Software Developer with 4+ years of experience building enterprise-scale and public-facing web applications with TypeScript, JavaScript, React, Node.js, Express, MySQL, and AWS. Experienced in frontend architecture, API integrations, relational SQL systems, cloud deployments, and close stakeholder collaboration, with a track record of delivering polished, scalable software products.
           </p>
         </section>
 
@@ -100,7 +100,7 @@ export default function Resume() {
           <div className={styles.skillsTable}>
             <div className={styles.skillRow}>
               <span className={styles.skillLabel}>Languages</span>
-              <span className={styles.skillValue}>JavaScript (ES6+), HTML5, CSS3, SCSS, SQL</span>
+              <span className={styles.skillValue}>TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, SQL</span>
             </div>
             <div className={styles.skillRow}>
               <span className={styles.skillLabel}>Frameworks &amp; Libraries</span>
@@ -108,11 +108,11 @@ export default function Resume() {
             </div>
             <div className={styles.skillRow}>
               <span className={styles.skillLabel}>Databases &amp; APIs</span>
-              <span className={styles.skillValue}>MySQL, REST APIs, GraphQL, Firebase</span>
+              <span className={styles.skillValue}>MySQL, Supabase, REST APIs, GraphQL, Firebase</span>
             </div>
             <div className={styles.skillRow}>
               <span className={styles.skillLabel}>Tools &amp; Platforms</span>
-              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3 / Lambda), VS Code, Cursor, AI-Assisted Engineering Workflows</span>
+              <span className={styles.skillValue}>Git, GitHub, SVN, AWS (S3/Lambda), VS Code, Cursor, Claude Code, AI-Assisted Development Workflows</span>
             </div>
           </div>
         </section>
